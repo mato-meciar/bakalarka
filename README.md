@@ -1,3 +1,3 @@
 # Bakalarka
 
-Stranka bakalarskej prace: http://mato-meciar.github.io/bakalarka
+Stranka bakalarskej prace: http://www.st.fmph.uniba.sk/~meciar7/bp/index.php
