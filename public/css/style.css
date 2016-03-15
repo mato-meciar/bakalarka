@@ -1,0 +1,11 @@
+#login a:hover {
+    text-decoration: none;
+}
+
+#login a {
+    color: #ddd;
+}
+
+#register-btn, #login-btn {
+    width: 121px;
+}
