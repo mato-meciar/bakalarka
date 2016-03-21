@@ -75,6 +75,10 @@
                                 <div class="modal-body">
                                     <form role="form">
                                         <div class="form-group">
+                                            Ste zadavatel?  <div class="radio"><label><input type="radio" name="optradio" value="yes">ano</label></div>
+                                            <div class="radio"><label><input type="radio" name="optradio" value="no" checked="checked">nie</label></div>
+                                        </div>
+                                        <div class="form-group">
                                             <input type="email" class="form-control" placeholder="E-mail">
                                         </div>
                                         <div class="form-group">

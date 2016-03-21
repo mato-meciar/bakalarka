@@ -51,7 +51,7 @@
                 <!-- logout -->
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <button class="btn btn-success navbar-btn" id="login"><a href="../public/login">Prihlasenie</a></button>
+                        <button class="btn btn-success navbar-btn" id="login"><a href="../public/create_project">Prihlasenie</a></button>
                     </li>
                 </ul>
             </div>
