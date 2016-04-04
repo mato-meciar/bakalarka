@@ -1,6 +1,7 @@
 <?php
 
 require_once dirname(dirname(__FILE__))."\\models\\DBtables\\User.php";
+require_once dirname(dirname(__FILE__))."\\models\\DBtables\\Project.php";
 
 class API extends BaseController {
     
@@ -21,6 +22,7 @@ class API extends BaseController {
                 if ($result) {
                     $_SESSION['user'] = $user->getEmail();
                     $_SESSION['role'] = $user->getRole();
+                    $_SESSION['uid'] = $user->getUid();
                     return true;
                 } else {
                     return false;
@@ -41,6 +43,7 @@ class API extends BaseController {
             if ($result) {
                 $_SESSION['user'] = $user->getEmail();
                 $_SESSION['role'] = $user->getRole();
+                $_SESSION['uid'] = $user->getUid();
                 return true;
             } else {
                 return false;
@@ -54,8 +57,29 @@ class API extends BaseController {
         if (!$this->isLoggedUser()) {
             return;
         } else {
-            unset($_SESSION['user']);
-            unset($_SESSION['role']);
+            unset($_SESSION);
+        }
+    }
+    
+    public function createProject() {
+        $name = $_POST['name'];
+        $details = $_POST['details'];
+        $creator_id = $_SESSION['uid'];
+        $domain = $_POST['domain'];
+        $platform = $_POST['platform'];
+        $technologies = $_POST['technologies'];
+        $year = CURRENT_SCHOOL_YEAR;
+        if (($name != null) && ($details != null) && ($creator_id != null) && ($domain != null) && ($platform != null) && ($technologies != null) && ($year != null)) {
+            $project = new Project();
+            $result = $project->addProject($name, $details, $creator_id, $domain, $platform, $technologies, $year);
+            if ($result) {
+                unset($_POST);
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
         }
     }
 }

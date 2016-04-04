@@ -40,3 +40,16 @@
     jQuery(".tm-input-platform").tagsManager({hiddenTagListName: 'platform', delimiters: [44, 13]});
     jQuery(".tm-input-technologies").tagsManager({hiddenTagListName: 'technologies', delimiters: [44, 13]});
 </script>
+
+
+<?php
+    require_once dirname(dirname(dirname(__FILE__)))."\\controllers\\API.php";
+
+        if (isset($_POST['name']) && isset($_POST['details']) && isset($_POST['domain']) && isset($_POST['platform']) && isset($_POST['technologies'])) {
+            $api = new API();
+            $result = $api->createProject();
+            if ($result) {
+                unset($_POST);
+            }
+        }
+    ?>

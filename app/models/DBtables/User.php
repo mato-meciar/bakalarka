@@ -11,7 +11,7 @@ class User {
         $role = null;
     }
 
-    public function existsUserUID($uid) {
+    public function existsUserUid($uid) {
         $mysql = new MySQL();
         $uid = $mysql->validate($uid);
 
@@ -56,6 +56,10 @@ class User {
             echo "<script>alert('Uzivatel so zadanou e-mailovou adresou uz existuje!');</script>";
             return false;
         }
+    }
+    
+    public function getUserUid($email) {
+        
     }
     
     public function getUser() {
