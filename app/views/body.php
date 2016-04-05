@@ -18,6 +18,7 @@
     <script src="<?= URL_BASE ?>/public/js/validator.js"></script>
     <!--<script src="<?= URL_BASE ?>/public/js/bootstrap-tagsinput.js"></script>-->
     <script src="<?= URL_BASE ?>/public/js/tagmanager.js"></script>
+    <script src="<?= URL_BASE ?>/public/js/scripts.js"></script>
 </head>
 
 <body>

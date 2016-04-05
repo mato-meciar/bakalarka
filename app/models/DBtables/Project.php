@@ -2,21 +2,26 @@
 
 class Project {
     
-    public function getProjectList() {
+    public function getProjectList($uid = null) {
         $mysql = new MySQL();
         
-        $sql = "SELECT p.id, p.nazov, p.popis, p.vytvoril_id, p.skupina_id, p.oblast, p.platforma, p.technologie, p.schvaleny, p.dolezity, p.rok
-                FROM projekt p";
+        if ($uid != null) {
+            $sql = "SELECT p.id, p.nazov, p.popis, p.vytvoril_id, p.skupina_id, p.oblast, p.platforma, p.technologie, p.schvaleny, p.dolezity, p.rok
+                    FROM projekt p WHERE p.vytvoril_id = '$uid'";
+        } else {
+            $sql = "SELECT p.id, p.nazov, p.popis, p.vytvoril_id, p.skupina_id, p.oblast, p.platforma, p.technologie, p.schvaleny, p.dolezity, p.rok
+                    FROM projekt p";
+        }
         return $mysql->get_all($sql);
     }
     
     public function getProject($project_id) {
         $mysql = new MySQL();
-        $project_id = $mysql->validate($project_id);
+        $projectID = $mysql->validate($project_id);
         
         $sql = "SELECT p.id, p.nazov, p.popis, p.vytvoril_id, p.skupina_id, p.oblast, p.platforma, p.technologie, p.schvaleny, p.dolezity, p.rok
                 FROM projekt p
-                WHERE p.id = '$project_id'";
+                WHERE p.id = '$projectID'";
         return $mysql->get_one($sql);
     }
     
@@ -56,17 +61,14 @@ class Project {
         }
     }
     
-    public function updateProject($project_id, $name, $details, $domain, $platform, $technologies, $approved, $important, $year) {
+    public function updateProject($project_id, $name, $details, $domain, $platform, $technologies) {
         $mysql = new MySQL();
-        $project_id = $mysql->validate($project_id);
+        $projectID = $mysql->validate($project_id);
         $name = $mysql->validate($name);
         $details = $mysql->validate($details);
-        $domain = $mysql->validate($technologies);
+        $domain = $mysql->validate($domain);
         $platform = $mysql->validate($platform);
         $technologies = $mysql->validate($technologies);
-        $approved = $mysql->validate($approved);
-        $important = $mysql->validate($important);
-        $year = $mysql->validate($year);
         
         $sql = 'UPDATE projekt
                 SET 
@@ -74,11 +76,9 @@ class Project {
                     '.(($details != '') ? 'popis = "'.$details.'",' : '').'
                     '.(($domain != '') ? 'oblast = "'.$domain.'",' : '').'
                     '.(($platform != '') ? 'platforma = "'.$platform.'",' : '').'
-                    '.(($technologies != '') ? 'technologie = "'.$technologie.'",' : '').'
-                    '.(($approved != '') ? 'schvaleny = "'.$approved.'",' : '').'
-                    '.(($important != '') ? 'dolezity = "'.$important.'",' : '').'
-                    '.(($year != '') ? 'rok = "'.$year.'",' : '').'
-                WHERE id = "'.$project_id.'"';
+                    '.(($technologies != '') ? 'technologie = "'.$technologies.'"' : '').'
+                WHERE id = "'.$projectID.'"';
+        var_dump($sql);
         return $mysql->set($sql);
     }
     

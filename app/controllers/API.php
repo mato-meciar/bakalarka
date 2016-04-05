@@ -82,4 +82,58 @@ class API extends BaseController {
             return false;
         }
     }
+    
+    public function updateProject($projectID) {
+        $name = $_POST['name'];
+        $details = $_POST['details'];
+        $creator_id = $_SESSION['uid'];
+        $domain = $_POST['domain'];
+        $platform = $_POST['platform'];
+        $technologies = $_POST['technologies'];
+        $year = CURRENT_SCHOOL_YEAR;
+        $project = new Project();
+        $result = $project->updateProject($projectID, $name, $details, $domain, $platform, $technologies);
+        if ($result) {
+            unset($_POST);
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+    public function createGroup() {
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $leader_id = $_SESSION['uid'];
+        $skills = $_POST['skills'];
+        $members = $_POST['members'];
+        if (($name != null) && ($email != null) && ($leader_id != null) && ($skills != null) && ($members != null)) {
+            $group = new Group();
+            $result = $group->addGroup($name, $email, $leader_id, $skills, $members);
+            if ($result) {
+                unset($_POST);
+                return true;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
+    
+    public function updateGroup($group_id) {
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $skills = $_POST['skills'];
+        $members = $_POST['members'];
+        $group = new Group();
+        $result = $group->updategroup($group_id, $name, $email, $skills, $members);
+        var_dump($result);
+        if ($result) {
+            unset($_POST);
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
