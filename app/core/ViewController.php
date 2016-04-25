@@ -10,11 +10,11 @@ class ViewController extends BaseController {
         $this->navigation = array();
     }
     
-    private function showContent($view, $data = array()) {
+    protected function showContent($view, $data = array()) {
         require_once '../app/views/body.php';
     }
     
-    private function showLogin($message = "") {
+    protected function showLogin($message = "") {
         $view = 'login/index';
         $title = 'Prihlasenie';
         $data = array('message' => $message);

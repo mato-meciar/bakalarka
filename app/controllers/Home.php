@@ -9,6 +9,8 @@
         public function index($data = '') {
             if ($this->isLoggedUser()) {
                 $this->View($data);
+            } else {
+                $this->showLogin();
             }
         }
         

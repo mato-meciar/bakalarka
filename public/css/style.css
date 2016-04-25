@@ -21,3 +21,7 @@ body {
 #well {
     overflow-x: scroll;
 }
+
+.table-list-link tbody tr:hover{
+    cursor: pointer;
+}
