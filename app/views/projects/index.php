@@ -3,7 +3,7 @@
 <table class="table table-hover table-bordered table-list-link">
     <thead>
         <tr>
-            <th>Nazov</th>
+            <th style="width: 150px;">Nazov</th>
             <th>Popis</th>
         </tr>
     </thead>

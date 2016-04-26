@@ -33,7 +33,7 @@ class Group {
         $mysql = new MySQL();
         $leaderID = $mysql->validate($leader_id);
 
-        $sql = "SELECT s.id, s.nazov, s.email, s.veduci_id, s.schopnosti, s.clenovia
+        $sql = "SELECT s.id, s.nazov, s.email, s.veduci_id, s.schopnosti, s.clenovia, s.preferencie
                 FROM skupina s
                 WHERE s.veduci_id = '$leaderID'";
         return $mysql->get_one($sql);
@@ -49,8 +49,6 @@ class Group {
         
         $sql = "INSERT INTO skupina(nazov, email, veduci_id, schopnosti, clenovia)
                 VALUES('$name', '$email', '$leader_id', '$skills', '$members')";
-        var_dump($sql);
-//        mozno problem s LAST_INSERT_ID !!!
         if ($mysql->set($sql)) {
             $sql = 'SELECT LAST_INSERT_ID()';
             return $mysql->get_one($sql)[0];
@@ -73,6 +71,17 @@ class Group {
                     '.(($email != '') ? 'email = "'.$email.'",' : '').'
                     '.(($skills != '') ? 'schopnosti = "'.$skills.'",' : '').'
                     '.(($members != '') ? 'clenovia = "'.$members.'"' : '').'
+                WHERE id = "'.$groupID.'"';
+        return $mysql->set($sql);
+    }
+    
+    public function updatePreferences($preferences, $groupID) {
+        $mysql = new MySQL();
+        $preferences = $mysql->validate($preferences);
+        
+        $sql = 'UPDATE skupina
+                SET 
+                    preferencie = "'.$preferences.'"
                 WHERE id = "'.$groupID.'"';
         var_dump($sql);
         return $mysql->set($sql);

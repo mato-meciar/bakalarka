@@ -16,8 +16,8 @@
         
         public function logout() {
             if ($this->isLoggedUser()) {
-                unset($_SESSION['user']);
-                unset($_SESSION['role']);
+                session_start();
+                session_destroy();
                 $this->userLogout();
                 header("Location: ".URL_BASE."/public/login");
             }

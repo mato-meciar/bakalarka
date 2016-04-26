@@ -1,8 +1,18 @@
 <h3>Prihlasenie</h3>
-<div class="col-md-5 well">
+
+<div class="col-md-5 well" id="form">
+    <?php
+        if (isset($_POST['email'])) {
+            echo '<div class="alert alert-danger fade in" id="alert">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                     Nespravny e-mail a/alebo heslo!
+                    </div>';
+        }
+    ?>
+    
     <form method="post" role="form" id="loginForm" data-toggle="validator">
         <div class="form-group">
-            <input type="email" id="email" class="form-control" data-error="Neplatna e-mailova adresa" placeholder="Zadajte svoj e-mail" name="email" required>
+            <input type="email" id="email" class="form-control" data-error="Neplatna e-mailova adresa" placeholder="Zadajte svoj e-mail" name="email" required value="<?php if (isset($_POST['email'])) echo $_POST['email'];?>">
             <div class="help-block with-errors"></div>
         </div>
         <div class="form-group">
@@ -23,6 +33,7 @@
             $result = $api->login();
             if ($result) {
                 header("Location: ".URL_BASE."/public/home");
+            } else {
             }
         }
     ?>

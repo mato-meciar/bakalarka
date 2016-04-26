@@ -12,7 +12,6 @@ class API extends BaseController {
     public function login() {
 //        $_POST = array('email' => '', 'password => '');
         if ($this->isLoggedUser()) {
-            echo 'OK';
         } else {
             $email = $_POST['email'];
             $password = $_POST['password'];
@@ -25,6 +24,7 @@ class API extends BaseController {
                     $_SESSION['uid'] = $user->getUid();
                     return true;
                 } else {
+                    $_POST['password'] = "";
                     return false;
                 }
             } else {
@@ -57,7 +57,7 @@ class API extends BaseController {
         if (!$this->isLoggedUser()) {
             return;
         } else {
-            unset($_SESSION);
+            $this->userLogout();
         }
     }
     
@@ -128,12 +128,25 @@ class API extends BaseController {
         $members = $_POST['members'];
         $group = new Group();
         $result = $group->updategroup($group_id, $name, $email, $skills, $members);
-        var_dump($result);
         if ($result) {
             unset($_POST);
             return true;
         } else {
             return false;
         }
+    }
+    
+    public function projectPreferences($preferences, $groupID) {
+        var_dump($groupID);
+        $prefString = "";
+        if ($preferences != "none") {
+            foreach ($preferences as $key => $value) {
+                echo "key: $key, value: $value\n";
+                $prefString = $prefString."$key:$value;";
+            }
+        }
+        $group = new Group();
+        $result = $group->updatePreferences($prefString, $groupID);
+        return true;
     }
 }

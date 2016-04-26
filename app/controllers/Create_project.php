@@ -8,7 +8,11 @@
         }
         
         public function index() {
-            $this->view('create_project/index');
+            if ($this->isLoggedUser()) {
+                $this->view('create_project/index');
+            } else {
+                header("Location: ".URL_BASE."/public/login");
+            }
         }
 
     }

@@ -25,3 +25,14 @@ body {
 .table-list-link tbody tr:hover{
     cursor: pointer;
 }
+
+.ellipsis {
+    text-overflow: ellipsis;
+    white-space: pre-line;
+    overflow: auto;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}

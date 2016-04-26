@@ -27,6 +27,7 @@
 <button id="back" class="btn btn-danger" onclick="window.history.go(-1); return false;"><span class="glyphicon glyphicon-chevron-left"></span> Spat</button>
 <?php
     if (($_SESSION['role'] =='admin') || ($_SESSION['uid'] == $data['projectInfo']['vytvoril_id'])) {
-    echo '<a class="btn btn-primary" href="' . URL_BASE . '/public/projects/edit/' . $data['projectInfo']['id'] . '"><span class="glyphicon glyphicon-edit"></span> Upravit projekt</a>';
+    echo '<a class="btn btn-primary" href="' . URL_BASE . '/public/projects/edit/' . $data['projectInfo']['id'] . '"><span class="glyphicon glyphicon-edit"></span> Upravit projekt</a> ';
+    echo '<a class="btn btn-success" href="' . URL_BASE . '/public/projects/approve/' . $data['projectInfo']['id'] . '"><span class="glyphicon glyphicon-edit"></span> Schvalit projekt</a>';
 }
 ?>

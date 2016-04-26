@@ -8,6 +8,7 @@
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Zoznam projektov
                 <span class="caret"></span></a>
                 <ul class="dropdown-menu navbar-inverse">
+                    <li><a href="'; echo URL_BASE; echo '/public/projects/approval">Na schvalenie</a></li>
                     <li><a href="'; echo URL_BASE; echo '/public/projects/index/true">Moje</a></li>
                     <li><a href="'; echo URL_BASE; echo '/public/projects">Vsetky</a></li>
                 </ul>';
@@ -32,6 +33,7 @@
                     <li><a href="'; echo URL_BASE; echo '/public/groups/edit">Upravit</a></li>
                 </ul>';
             echo '<li><a class="'; echo $this->isNavLinkActive('projects') ? 'active' : ''; echo '" href="'; echo URL_BASE; echo '/public/projects">Zoznam projektov</a></li>';
+            echo '<li><a class="'; echo $this->isNavLinkActive('select') ? 'active' : ''; echo '" href="'; echo URL_BASE; echo '/public/select">Vyber projektu</a></li>';
             echo '<li><a href="'; echo URL_BASE; echo '/public/home/logout">Odhlasenie<span class="glyphicon glyphicon-log-out grey"></span></a></li>';
                             }
                         } else {

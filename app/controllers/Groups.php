@@ -12,6 +12,8 @@
         public function index() {
             if ($this->isLoggedUser()) {
                 $this->view('group/index');
+            } else {
+                header("Location: ".URL_BASE."/public/login");
             }
         }
         

@@ -19,6 +19,8 @@
                     $listProjects = $project->getProjectList();
                     $this->view(array('listProjects' => $listProjects));
                 }
+            } else {
+                header("Location: ".URL_BASE."/public/login");
             }
         }
         
@@ -35,6 +37,23 @@
                 $project = new Project();
                 $projectInfo = $project->getProject($projectID);
                 $this->view(array('projectInfo' => $projectInfo));
+            }
+        }
+        
+        public function approval() {
+            if ($this->isLoggedUser()) {
+                $project = new Project();
+                $listProjects = $project->getApprovalProjectList();
+                $this->view(array('listProjects' => $listProjects));
+            } else {
+                header("Location: ".URL_BASE."/public/login");
+            }
+        }
+        
+        public function approve($projectID) {
+            if ($this->isLoggedUser()) {
+                $this->view(array('projectID' => $projectID));
+//                header("Location: ".URL_BASE."/public/approval");
             }
         }
 

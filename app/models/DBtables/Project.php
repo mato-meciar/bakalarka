@@ -15,6 +15,24 @@ class Project {
         return $mysql->get_all($sql);
     }
     
+    public function getApprovalProjectList() {
+        $mysql = new MySQL();
+
+        $sql = "SELECT p.id, p.nazov, p.popis, p.vytvoril_id, p.skupina_id, p.oblast, p.platforma, p.technologie, p.schvaleny, p.dolezity, p.rok
+                FROM projekt p
+                WHERE p.schvaleny = 0";
+        return $mysql->get_all($sql);
+    }
+    
+        public function getUnapprovedCount() {
+        $mysql = new MySQL();
+
+        $sql = "SELECT COUNT(*) neschvalenych
+                FROM projekt p
+                WHERE p.schvaleny = 0";
+        return $mysql->get_one($sql);
+    }
+    
     public function getProject($project_id) {
         $mysql = new MySQL();
         $projectID = $mysql->validate($project_id);
@@ -52,7 +70,6 @@ class Project {
         
         $sql = "INSERT INTO projekt(nazov, popis, vytvoril_id, oblast, platforma, technologie, rok)
                 VALUES('$name', '$details', '$creator_id', '$domain', '$platform', '$technologies', '$year')";
-//        mozno problem s LAST_INSERT_ID !!!
         if ($mysql->set($sql)) {
             $sql = 'SELECT LAST_INSERT_ID()';
             return $mysql->get_one($sql)[0];
@@ -78,7 +95,17 @@ class Project {
                     '.(($platform != '') ? 'platforma = "'.$platform.'",' : '').'
                     '.(($technologies != '') ? 'technologie = "'.$technologies.'"' : '').'
                 WHERE id = "'.$projectID.'"';
-        var_dump($sql);
+        return $mysql->set($sql);
+    }
+    
+    public function approve($projectID) {
+        $mysql = new MySQL();
+        $projectID = $mysql->validate($projectID);
+        
+        $sql = 'UPDATE projekt
+                SET 
+                    schvaleny = 1
+                WHERE id = "'.$projectID.'"';
         return $mysql->set($sql);
     }
     

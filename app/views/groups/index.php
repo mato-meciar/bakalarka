@@ -14,13 +14,13 @@
             <div class="form-group">
                 <label for="members">Clenovia skupiny</label>
                 <div>
-                    <input type="text" class="form-control tm-input-members" id="members" required>
+                    <input type="text" class="form-control tm-input-members" id="members">
                 </div>
             </div>
             <div class="form-group">
                 <label for="skills">Skusenosti</label>
                 <div>
-                    <input type="text" class="form-control tm-input-skills" id="skills" required>
+                    <input type="text" class="form-control tm-input-skills" id="skills">
                 </div>
             </div>
             <input type="submit" class="btn btn-primary" value="Vytvorit skupinu">
