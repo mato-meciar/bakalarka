@@ -55,7 +55,12 @@ class Project {
                 END) status
                 FROM projekt
                 WHERE id = '$project_id'";
-        return $mysql->get_all($sql);
+        $result =  $mysql->get_one($sql);
+        if ($result != null && $result['status'] == "Ano") {
+            return true;
+        } else if ($result['status'] == "Nie") {
+            return false;
+        }
     }
     
     public function addProject($name, $details, $creator_id, $domain, $platform, $technologies, $year) {
