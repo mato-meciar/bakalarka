@@ -1,8 +1,8 @@
 <?php
 
-require_once dirname(dirname(__FILE__))."\\models\\MySQL.php";
-require_once dirname(dirname(__FILE__))."\\models\\DBtables\\Access.php";
-require_once dirname(dirname(__FILE__))."\\models\\DBtables\\User.php";
+require_once dirname(dirname(__FILE__))."/models/MySQL.php";
+require_once dirname(dirname(__FILE__))."/models/DBtables/Access.php";
+require_once dirname(dirname(__FILE__))."/models/DBtables/User.php";
 
 class BaseController {
     
@@ -40,7 +40,7 @@ class BaseController {
     }
 
     public function model($model) {
-        require_once '../app/models/' . $model . '.php';
+        require_once dirname(dirname(__FILE__)).'/models/' . $model . '.php';
         return new $model();
     }
     

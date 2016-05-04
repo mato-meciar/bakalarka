@@ -26,7 +26,7 @@
     </form>
 
     <?php
-    require_once dirname(dirname(dirname(__FILE__)))."\\controllers\\API.php";
+    require_once dirname(dirname(dirname(__FILE__)))."/controllers/API.php";
 
         if (isset($_POST['email']) && isset($_POST['password'])) {
             $api = new API();

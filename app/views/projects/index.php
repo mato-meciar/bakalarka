@@ -9,7 +9,6 @@
     </thead>
     <tbody>
         <?php
-//            var_dump($data);
             foreach ($data['listProjects'] as $row) {
                 echo '<tr onclick="elementOnClick(this)" href="' . URL_BASE . '/public/projects/detail/' . $row['id'] . '">';
                 echo '<td>' . $row['nazov'] . '</td>';

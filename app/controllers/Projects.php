@@ -1,6 +1,6 @@
 <?php
 
-    require_once dirname(dirname(__FILE__))."\\models\\DBtables\\Project.php";
+    require_once dirname(dirname(__FILE__))."/models/DBtables/Project.php";
 
     class Projects extends ViewController {
         
@@ -16,6 +16,10 @@
                     $listProjects = $project->getProjectList($_SESSION['uid']);
                     $this->view(array('listProjects' => $listProjects));
                 } else {
+                    if ($this->hasLoggedUserAccess("uzivatel")) {
+                        $listProjects = $project->getApprovedProjectList();
+                        $this->view(array('listProjects' => $listProjects));
+                    }
                     $listProjects = $project->getProjectList();
                     $this->view(array('listProjects' => $listProjects));
                 }
@@ -43,7 +47,7 @@
         public function approval() {
             if ($this->isLoggedUser()) {
                 $project = new Project();
-                $listProjects = $project->getApprovalProjectList();
+                $listProjects = $project->getUnapprovedProjectList();
                 $this->view(array('listProjects' => $listProjects));
             } else {
                 header("Location: ".URL_BASE."/public/login");

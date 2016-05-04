@@ -1,6 +1,6 @@
 <?php
 
-    require_once dirname(dirname(__FILE__))."\\models\\DBtables\\Group.php";
+    require_once dirname(dirname(__FILE__))."/models/DBtables/Group.php";
 
     class Groups extends ViewController {
         

@@ -15,12 +15,21 @@ class Project {
         return $mysql->get_all($sql);
     }
     
-    public function getApprovalProjectList() {
+    public function getUnapprovedProjectList() {
         $mysql = new MySQL();
 
         $sql = "SELECT p.id, p.nazov, p.popis, p.vytvoril_id, p.skupina_id, p.oblast, p.platforma, p.technologie, p.schvaleny, p.dolezity, p.rok
                 FROM projekt p
                 WHERE p.schvaleny = 0";
+        return $mysql->get_all($sql);
+    }
+    
+    public function getApprovedProjectList() {
+        $mysql = new MySQL();
+
+        $sql = "SELECT p.id, p.nazov, p.popis, p.vytvoril_id, p.skupina_id, p.oblast, p.platforma, p.technologie, p.schvaleny, p.dolezity, p.rok
+                FROM projekt p
+                WHERE p.schvaleny = 1";
         return $mysql->get_all($sql);
     }
     
@@ -30,7 +39,7 @@ class Project {
         $sql = "SELECT COUNT(*) neschvalenych
                 FROM projekt p
                 WHERE p.schvaleny = 0";
-        return $mysql->get_one($sql);
+        return $mysql->get_one($sql)['neschvalenych'];
     }
     
     public function getProject($project_id) {

@@ -1,5 +1,5 @@
 <?php
-    require_once dirname(dirname(dirname(__FILE__)))."\\controllers\\API.php";
+    require_once dirname(dirname(dirname(__FILE__)))."/controllers/API.php";
         if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['members']) && isset($_POST['skills'])) {
             $api = new API();
             $result = $api->updateGroup($data['groupInfo']['id']);

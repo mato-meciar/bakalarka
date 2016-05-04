@@ -1,6 +1,6 @@
 <?php
-    require_once dirname(dirname(__FILE__))."\\models\\DBtables\\Project.php";
-    require_once dirname(dirname(__FILE__))."\\models\\DBtables\\Group.php";
+    require_once dirname(dirname(__FILE__))."/models/DBtables/Project.php";
+    require_once dirname(dirname(__FILE__))."/models/DBtables/Group.php";
 
 
     class Select extends ViewController {
@@ -11,9 +11,9 @@
         }
         
         public function index() {
-            if ($this->isLoggedUser()) {
+            if ($this->isLoggedUser() && $this->hasLoggedUserAccess("uzivatel")) {
                 $project = new Project();
-                    $listProjects = $project->getProjectList();
+                    $listProjects = $project->getApprovedProjectList();
                     $group = new Group();
                     $groupInfo = $group->getGroupByLeader($_SESSION['uid']);
                     $this->view(array('listProjects' => $listProjects, 'groupInfo' => $groupInfo));

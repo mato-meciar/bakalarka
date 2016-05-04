@@ -1,5 +1,5 @@
 <?php
-    require_once dirname(dirname(dirname(__FILE__)))."\\controllers\\API.php";
+    require_once dirname(dirname(dirname(__FILE__)))."/controllers/API.php";
 
     if (sizeof($_POST) > 0){
         $api = new API();

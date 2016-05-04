@@ -1,6 +1,6 @@
 <?php
 
-require_once dirname(__FILE__)."\\BaseController.php";
+require_once dirname(__FILE__)."/BaseController.php";
 
 class ViewController extends BaseController {
     private $navigation;
@@ -11,14 +11,14 @@ class ViewController extends BaseController {
     }
     
     protected function showContent($view, $data = array()) {
-        require_once '../app/views/body.php';
+        require_once dirname(dirname(__FILE__)).'/views/body.php';
     }
     
     protected function showLogin($message = "") {
         $view = 'login/index';
         $title = 'Prihlasenie';
         $data = array('message' => $message);
-        require_once dirname(dirname(__FILE__))."\\views\\body.php";
+        require_once dirname(dirname(__FILE__))."/views/body.php";
     }
     
     protected function setNavLinkActive($key) {
@@ -37,7 +37,7 @@ class ViewController extends BaseController {
         $controller_name = 'home';
         $method = 'index';
         $url = explode('/', filter_var(rtrim(@$_GET['url'], '/'), FILTER_SANITIZE_URL));
-        if (file_exists('../app/controllers/' . $url[0] . '.php')) {
+        if (file_exists(dirname(dirname(__FILE__)).'/controllers/' . $url[0] . '.php')) {
             $controller_name = $url[0];
         }
         if (isset($url[1])) {
@@ -46,7 +46,7 @@ class ViewController extends BaseController {
                 $method = $url[1];
             }
         }
-        if (file_exists('../app/views/' . $controller_name . '/' . $method . '.php')) {
+        if (file_exists(dirname(dirname(__FILE__)).'/views/' . $controller_name . '/' . $method . '.php')) {
             $this->showContent($controller_name . '/' . $method, $data);
         } else {
             throw new Exception('File app/views/' . $controller_name . '/' . $method . '.php doesn\'t exist');
@@ -56,7 +56,7 @@ class ViewController extends BaseController {
     protected function viewMessage($message) {
         $view = 'message';
         $data = array('message' => $message);
-        require_once '../app/views/body.php';
+        require_once dirname(dirname(__FILE__)).'/views/body.php';
     }
     
     protected function refresh() {

@@ -1,5 +1,5 @@
 <?php
-    require_once dirname(dirname(dirname(__FILE__)))."\\models\\DBtables\\Project.php";
+    require_once dirname(dirname(dirname(__FILE__)))."/models/DBtables/Project.php";
 
     $project = new Project();
     $project->approve($data['projectID']); ?>

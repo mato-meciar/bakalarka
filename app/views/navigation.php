@@ -1,5 +1,7 @@
 <ul class="sidebar-nav navbar-inverse">
     <?php
+        require_once dirname(dirname(__FILE__))."/models/DBtables/Project.php";
+
         if ($this->isLoggedUser()) {
             echo '<li class="sidebar-brand"><a href="'; echo URL_BASE; echo '/public/home">Tvorba informacnych systemov</a></li>';
             echo '<li><a class="'; echo $this->isNavLinkActive('home') ? 'active' : ''; echo '" href="'; echo URL_BASE; echo '/public/home">Domov</a></li>';
@@ -8,7 +10,7 @@
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Zoznam projektov
                 <span class="caret"></span></a>
                 <ul class="dropdown-menu navbar-inverse">
-                    <li><a href="'; echo URL_BASE; echo '/public/projects/approval">Na schvalenie</a></li>
+                    <li><a href="'; echo URL_BASE; echo '/public/projects/approval">Na schvalenie (<strong><strong>'; $project = new Project(); echo $project->getUnapprovedCount(); echo '</strong></strong>)</a></li>
                     <li><a href="'; echo URL_BASE; echo '/public/projects/index/true">Moje</a></li>
                     <li><a href="'; echo URL_BASE; echo '/public/projects">Vsetky</a></li>
                 </ul>';

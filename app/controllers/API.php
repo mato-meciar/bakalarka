@@ -1,7 +1,7 @@
 <?php
 
-require_once dirname(dirname(__FILE__))."\\models\\DBtables\\User.php";
-require_once dirname(dirname(__FILE__))."\\models\\DBtables\\Project.php";
+require_once dirname(dirname(__FILE__))."/models/DBtables/User.php";
+require_once dirname(dirname(__FILE__))."/models/DBtables/Project.php";
 
 class API extends BaseController {
     
