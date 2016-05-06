@@ -2,10 +2,10 @@
 -- version 4.5.1
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Apr 26, 2016 at 03:32 PM
--- Server version: 5.7.9
--- PHP Version: 5.6.15
+-- Hostiteľ: 127.0.0.1
+-- Čas generovania: St 04.Máj 2016, 18:40
+-- Verzia serveru: 5.7.9
+-- Verzia PHP: 5.6.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `projekty`
+-- Databáza: `projekty`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pouzivatel`
+-- Štruktúra tabuľky pre tabuľku `pouzivatel`
 --
 
 DROP TABLE IF EXISTS `pouzivatel`;
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `pouzivatel` (
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_slovak_ci;
 
 --
--- Dumping data for table `pouzivatel`
+-- Sťahujem dáta pre tabuľku `pouzivatel`
 --
 
 INSERT INTO `pouzivatel` (`id`, `email`, `heslo`, `rola`) VALUES
@@ -48,7 +48,7 @@ INSERT INTO `pouzivatel` (`id`, `email`, `heslo`, `rola`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `projekt`
+-- Štruktúra tabuľky pre tabuľku `projekt`
 --
 
 DROP TABLE IF EXISTS `projekt`;
@@ -65,20 +65,21 @@ CREATE TABLE IF NOT EXISTS `projekt` (
   `dolezity` tinyint(3) UNSIGNED NOT NULL DEFAULT '0',
   `rok` smallint(5) UNSIGNED NOT NULL,
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_slovak_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_slovak_ci;
 
 --
--- Dumping data for table `projekt`
+-- Sťahujem dáta pre tabuľku `projekt`
 --
 
 INSERT INTO `projekt` (`id`, `nazov`, `popis`, `vytvoril_id`, `skupina_id`, `oblast`, `platforma`, `technologie`, `schvaleny`, `dolezity`, `rok`) VALUES
 (1, 'Test project', 'test', 6, -1, 'matematika,fyzika,astronomia', 'windows,unix', 'java,c#,c++', 0, 0, 2016),
-(2, 'Test Project 2', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in odio aliquam tortor maximus convallis quis ac mauris. Phasellus arcu elit, molestie id varius in, convallis eget odio. Maecenas suscipit sem neque, rhoncus feugiat risus blandit eu. Cras vitae lacus mi. Nulla auctor vitae nisi et pulvinar. Pellentesque nulla ipsum, posuere tincidunt consectetur sit amet, tristique at odio. Sed eu metus rhoncus enim elementum congue nec nec nisl. Quisque odio orci, consectetur non vestibulum et, vehicula ac nisi. Pellentesque at nunc non enim rhoncus pulvinar. Nam odio odio, tincidunt vitae blandit quis, rutrum ac leo. Phasellus sit amet vestibulum arcu. Maecenas imperdiet, arcu at consectetur luctus, justo arcu pellentesque urna, eget molestie tortor sapien at tellus. Proin posuere, nunc utut.', 6, -1, 'matematika,fyzika', 'windows', 'java,javascript,html', 0, 0, 2016);
+(2, 'Test Project 2', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in odio aliquam tortor maximus convallis quis ac mauris. Phasellus arcu elit, molestie id varius in, convallis eget odio. Maecenas suscipit sem neque, rhoncus feugiat risus blandit eu. Cras vitae lacus mi. Nulla auctor vitae nisi et pulvinar. Pellentesque nulla ipsum, posuere tincidunt consectetur sit amet, tristique at odio. Sed eu metus rhoncus enim elementum congue nec nec nisl. Quisque odio orci, consectetur non vestibulum et, vehicula ac nisi. Pellentesque at nunc non enim rhoncus pulvinar. Nam odio odio, tincidunt vitae blandit quis, rutrum ac leo. Phasellus sit amet vestibulum arcu. Maecenas imperdiet, arcu at consectetur luctus, justo arcu pellentesque urna, eget molestie tortor sapien at tellus. Proin posuere, nunc utut.', 6, -1, 'matematika,fyzika', 'windows', 'java,javascript,html', 1, 0, 2016),
+(3, 'Admin project', 'admin project description', 1, -1, 'astronomia,fyzika', 'windows', 'c,c++,java', 0, 0, 2016);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `skupina`
+-- Štruktúra tabuľky pre tabuľku `skupina`
 --
 
 DROP TABLE IF EXISTS `skupina`;
@@ -94,11 +95,11 @@ CREATE TABLE IF NOT EXISTS `skupina` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_slovak_ci;
 
 --
--- Dumping data for table `skupina`
+-- Sťahujem dáta pre tabuľku `skupina`
 --
 
 INSERT INTO `skupina` (`id`, `nazov`, `email`, `veduci_id`, `schopnosti`, `clenovia`, `preferencie`) VALUES
-(1, 'Test Group', 'uzivatel@test.com', 2, 'java,javscript,html,css', 'jozo,miso,peto,jano', '1:1;2:2;');
+(1, 'Test Group', 'uzivatel@test.com', 2, 'java,javscript,html,css', 'jozo,miso,peto,jano', '1:1;2:2;3:4;');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
