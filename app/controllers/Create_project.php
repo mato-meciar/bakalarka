@@ -8,7 +8,7 @@
         }
         
         public function index() {
-            if ($this->isLoggedUser()) {
+            if ($GLOBALS['user']->isLoggedUser()) {
                 $this->view('create_project/index');
             } else {
                 header("Location: ".URL_BASE."/public/login");

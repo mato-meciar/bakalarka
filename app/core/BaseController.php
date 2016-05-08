@@ -3,41 +3,51 @@
 require_once dirname(dirname(__FILE__))."/models/MySQL.php";
 require_once dirname(dirname(__FILE__))."/models/DBtables/Access.php";
 require_once dirname(dirname(__FILE__))."/models/DBtables/User.php";
+include_once dirname(dirname(__FILE__)).'/config.php';
+
+if (!isset($GLOBALS['user'])) {
+    $GLOBALS['user'] = new User();
+} 
 
 class BaseController {
     
-    private $myUser;
     
     public function __construct() {
-        $this->myUser = null;
-        if (isset($_SESSION['user']) && isset($_SESSION['role'])) {
-            $this->myUser = new User();
-            $this->myUser->setUser($_SESSION['user'], $_SESSION['role']);
-            
-            $accessManagement = new Access();
+//        if (isset($_SESSION['user']) && isset($_SESSION['role'])) {
+//            $this->myUser->setUser($_SESSION['user'], $_SESSION['role']);
+//            
+//            $accessManagement = new Access();
 //            $this->myUser['role'] = $accessManagement->getAccess($this->myUser['uid']['0']);
-        }
+//        }
+//        var_dump($_SESSION);
     }
     
     protected function userLogout() {
-        $this->myUser = null;
+        global $client;
+        unset($_SESSION['token']);
+        $GLOBALS['user'] = new User();
+        unset($_SESSION['email']);
+        unset($_SESSION['uid']);
+        unset($_SESSION['role']);
+        $client->revokeToken();
+        session_destroy();
     }
     
-    protected function isLoggedUser() {
-        return $this->myUser != null;
-    }
-    
-    protected function getLoggedUser() {
-        return $this->myUser;
-    }
-    
-    protected function getLoggedUserUID() {
-        return $this->myUser->getUid();
-    }
-    
-    protected function hasLoggedUserAccess($role) {
-        return $this->myUser->getRole() == $role;
-    }
+//    protected function isLoggedUser() {
+//        return $GLOBALS['user']->getEmail() != null;
+//    }
+//    
+//    protected function getLoggedUser() {
+//        return $GLOBALS['user'];
+//    }
+//    
+//    protected function getLoggedUserUID() {
+//        return $GLOBALS['user']->getUid();
+//    }
+//    
+//    protected function hasLoggedUserAccess($role) {
+//        return $GLOBALS['user']->getRole() == $role;
+//    }
 
     public function model($model) {
         require_once dirname(dirname(__FILE__)).'/models/' . $model . '.php';

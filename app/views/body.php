@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 
-<script src="https://apis.google.com/js/platform.js" async defer></script>
-<meta name="google-signin-client_id" content="29418959227-cea5c0a516p6nr0ef8n41mh51c4bm05h.apps.googleusercontent.com">
-
 <html lang="sk">
 <head>
     <title>Tvorba informacnych systemov</title>

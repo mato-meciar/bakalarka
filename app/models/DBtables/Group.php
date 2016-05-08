@@ -83,7 +83,6 @@ class Group {
                 SET 
                     preferencie = "'.$preferences.'"
                 WHERE id = "'.$groupID.'"';
-        var_dump($sql);
         return $mysql->set($sql);
     }
     

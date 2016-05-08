@@ -7,11 +7,10 @@
             $this->setNavLinkActive('login');
         }
         public function index() {
-            if ($this->isLoggedUser()) {
+            if ($GLOBALS['user']->isLoggedUser()) {
                 header("Location: ".URL_BASE."/public/home");
             } else {
                 $this->view('login/index');
             }
         }
-
     }

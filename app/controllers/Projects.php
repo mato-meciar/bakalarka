@@ -10,13 +10,13 @@
         }
         
         public function index($own = 'false') {
-            if ($this->isLoggedUser()) {
+            if ($GLOBALS['user']->isLoggedUser()) {
                 $project = new Project();
                 if ($own == 'true') {
                     $listProjects = $project->getProjectList($_SESSION['uid']);
                     $this->view(array('listProjects' => $listProjects));
                 } else {
-                    if ($this->hasLoggedUserAccess("uzivatel")) {
+                    if ($GLOBALS['user']->hasLoggedUserAccess("uzivatel")) {
                         $listProjects = $project->getApprovedProjectList();
                         $this->view(array('listProjects' => $listProjects));
                     }
@@ -29,23 +29,27 @@
         }
         
         public function detail($projectID) {
-            if ($this->isLoggedUser()) {
+            if ($GLOBALS['user']->isLoggedUser()) {
                 $project = new Project();
                 $projectInfo = $project->getProject($projectID);
                 $this->view(array('projectInfo' => $projectInfo));
+            } else {
+                header("Location: ".URL_BASE."/public/login");
             }
         }
         
         public function edit($projectID) {
-            if ($this->isLoggedUser()) {
+            if ($GLOBALS['user']->isLoggedUser()) {
                 $project = new Project();
                 $projectInfo = $project->getProject($projectID);
                 $this->view(array('projectInfo' => $projectInfo));
+            } else {
+                header("Location: ".URL_BASE."/public/login");
             }
         }
         
         public function approval() {
-            if ($this->isLoggedUser()) {
+            if ($GLOBALS['user']->isLoggedUser()) {
                 $project = new Project();
                 $listProjects = $project->getUnapprovedProjectList();
                 $this->view(array('listProjects' => $listProjects));
@@ -55,9 +59,11 @@
         }
         
         public function approve($projectID) {
-            if ($this->isLoggedUser()) {
+            if ($GLOBALS['user']->isLoggedUser()) {
                 $this->view(array('projectID' => $projectID));
-//                header("Location: ".URL_BASE."/public/approval");
+                header("Location: ".URL_BASE."/public/approval");
+            } else {
+                header("Location: ".URL_BASE."/public/login");
             }
         }
 

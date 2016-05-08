@@ -1,14 +1,7 @@
 <?php
 class User {
 
-    private $email;
-    private $uid;
-    private $role;
-
     public function __construct() {
-        $email = null;
-        $uid = null;
-        $role = null;
     }
 
     public function existsUserUid($uid) {
@@ -35,21 +28,41 @@ class User {
         $sql = "SELECT id, email, rola FROM pouzivatel WHERE email = '$email' AND heslo = '$password'";
         $result = $mysql->get_one_assoc($sql);
         if ($result != null) {
-            $this->email = $result['email'];
-            $this->uid = $result['id'];
-            $this->role = $result['rola'];
+            $GLOBALS['user']->setUser($result['email'], $result['rola'], $result['id']);
         }
         return boolval($result != null);
     }
     
-    public function registerUser($email, $password, $role) {
+    public function checkGoogleUser($google_id, $email) {
+        $newUser = false;
+        $mysql = new MySQL();
+        $google_id = $mysql->validate($google_id);
+        $email = $mysql->validate($email);
+        
+        $sql = "SELECT * FROM pouzivatel WHERE google_id = '".$google_id."' AND email = '".$email."'";
+        $result = $mysql->get_one_assoc($sql);
+        if ($result == null) {
+            $this->registerUser($email, NULL, $google_id, "uzivatel");
+            $newUser = true;
+        } 
+        $result = $mysql->get_one_assoc($sql);
+        if ($result != null) {
+            $GLOBALS['user']->setUser($result['email'], $result['rola'], $result['id']);
+        }
+        return $newUser;
+    }
+ 
+    public function registerUser($email, $password, $google_id, $role) {
         if (!$this->existsUserEmail($email)) {
             $mysql = new MySQL();
             $email = $mysql->validate($email);
             $password = $mysql->validate($password);
+            $google_id = $mysql->validate($google_id);
+            $role = $mysql->validate($role);
             
-            $sql = "INSERT INTO pouzivatel (id, email, heslo, rola) VALUES (NULL, '$email', '$password', '$role')";
+            $sql = "INSERT INTO pouzivatel (id, google_id, email, heslo, rola) VALUES (NULL, '$google_id', '$email', '$password', '$role')";
             $mysql->set($sql);
+            $this->setUser($email, $role, $this->getUserUid($email));
             return true;
         } else {
 //            user with given email already exists
@@ -59,7 +72,14 @@ class User {
     }
     
     public function getUserUid($email) {
+        $mysql = new MySQL();
+        $email = $mysql->validate($email);
         
+        $sql = "SELECT id FROM pouzivatel WHERE email = '$email'";
+        $result = $mysql->get_one($sql);
+        if ($result) {
+            return $result['id'];
+        }
     }
     
     public function getUser() {
@@ -67,19 +87,39 @@ class User {
     }
     
     public function getEmail() {
-        return $this->email;
+        if (isset($_SESSION['user'])) {
+            return $_SESSION['user'];
+        }
+        return null;
     }
     
     public function getRole() {
-        return $this->role;
+        if (isset($_SESSION['role'])) {
+            return $_SESSION['role'];
+        }
+        return null;
     }
     
     public function getUid() {
-        return $this->uid;
+        if (isset($_SESSION['uid'])) {
+            return $_SESSION['uid'];
+        }
+        return null;
     }
     
-    public function setUser($email, $role) {
-        $this->email = $email;
-        $this->role = $role;
+    public function setUser($email, $role, $uid) {
+        $_SESSION['user'] = $email;
+        $_SESSION['role'] = $role;
+        $_SESSION['uid'] = $uid;
+    }
+    
+    public function isLoggedUser() {
+        return isset($_SESSION['user']);
+    }
+    public function hasLoggedUserAccess($access) {
+        if (isset($_SESSION['role'])) {
+            return $_SESSION['role'] == $access;
+        }
+        return false;
     }
 }

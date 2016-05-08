@@ -1,11 +1,10 @@
 <ul class="sidebar-nav navbar-inverse">
     <?php
         require_once dirname(dirname(__FILE__))."/models/DBtables/Project.php";
-
-        if ($this->isLoggedUser()) {
+        if ($GLOBALS['user']->isLoggedUser()) {
             echo '<li class="sidebar-brand"><a href="'; echo URL_BASE; echo '/public/home">Tvorba informacnych systemov</a></li>';
             echo '<li><a class="'; echo $this->isNavLinkActive('home') ? 'active' : ''; echo '" href="'; echo URL_BASE; echo '/public/home">Domov</a></li>';
-                            if ($this->hasLoggedUserAccess('admin')) {
+                            if ($GLOBALS['user']->hasLoggedUserAccess('admin')) {
                         echo '<li class="dropdown '; echo $this->isNavLinkActive('projects') ? 'active' : ''; echo '">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Zoznam projektov
                 <span class="caret"></span></a>
@@ -16,7 +15,7 @@
                 </ul>';
             echo '<li><a class="'; echo $this->isNavLinkActive('create_project') ? 'active' : ''; echo '" href="'; echo URL_BASE; echo '/public/create_project">Vytvorit projekt</a></li>';
             echo '<li><a href="'; echo URL_BASE; echo '/public/home/logout">Odhlasenie<span class="glyphicon glyphicon-log-out grey"></span></a></li>';
-                            } else if ($this->hasLoggedUserAccess('zadavatel')) {            
+                            } else if ($GLOBALS['user']->hasLoggedUserAccess('zadavatel')) {            
             echo '<li class="dropdown '; echo $this->isNavLinkActive('projects') ? 'active' : ''; echo '">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Zoznam projektov
                 <span class="caret"></span></a>

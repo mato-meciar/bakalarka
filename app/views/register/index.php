@@ -2,8 +2,8 @@
 <div class="col-md-5 well">
     <form method="post" role="form" id="registerForm" data-toggle="validator">
         <div class="form-group">
-            Ste zadavatel?  <div class="radio"><label><input type="radio" name="role" value="zadavatel">ano</label></div>
-            <div class="radio"><label><input type="radio" name="role" value="uzivatel" checked="checked">nie</label></div>
+            Ste zadavatel?  <div class="radio"><input type="radio" id="role-1" name="role" value="zadavatel"><label for="role-1">ano</label></div>
+            <div class="radio"><input type="radio" id="role-2" name="role" value="uzivatel" checked><label for="role-2">nie</label></div>
         </div>
         <div class="form-group">
             <input type="email" id="email" class="form-control" data-error="Neplatna e-mailova adresa" placeholder="Zadajte svoj e-mail" name="email" required>
@@ -26,16 +26,16 @@
     
     <?php
     require_once dirname(dirname(dirname(__FILE__)))."/controllers/API.php";
-
+    if (!$GLOBALS['user']->isLoggedUser()) {
         if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['role'])) {
-            $api = new API();
-            $api->register();
-            $result = $api->login();
+            $result = $GLOBALS['user']->registerUser($_POST['email'], $_POST['password'], "NULL", $_POST['role']);
             if ($result) {
                 unset($_POST);
                 header("Location: ".URL_BASE."/public/home");
             }
         }
+}
+
     ?>
     
 </div>

@@ -16,7 +16,7 @@ class API extends BaseController {
             $email = $_POST['email'];
             $password = $_POST['password'];
             if ($email != null && $password != null) {
-                $user = new User();
+                $user = $this->getLoggedUser();
                 $result = $user->checkUser($email, $password);
                 if ($result) {
                     $_SESSION['user'] = $user->getEmail();
@@ -38,12 +38,13 @@ class API extends BaseController {
         $password = $_POST['password'];
         $role = $_POST['role'];
         if ($email != null && $password != null && $role != null) {
-            $user = new User();
-            $result = $user->registerUser($email, md5($password), $role);
+            $user = $this->getLoggedUser();
+            $result = $this->getLoggedUser()->registerUser($email, md5($password), "NULL", $role);
             if ($result) {
+                $user->setUser($email, $role, $user->getUserUid($user->getEmail()));
                 $_SESSION['user'] = $user->getEmail();
                 $_SESSION['role'] = $user->getRole();
-                $_SESSION['uid'] = $user->getUid();
+                $_SESSION['uid'] = $user->getUserUid($user->getEmail());
                 return true;
             } else {
                 return false;
@@ -137,7 +138,6 @@ class API extends BaseController {
     }
     
     public function projectPreferences($preferences, $groupID) {
-        var_dump($groupID);
         $prefString = "";
         if ($preferences != "none") {
             foreach ($preferences as $key => $value) {
