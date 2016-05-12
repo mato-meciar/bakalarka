@@ -22,6 +22,13 @@
 ?>
 
 <h2>Vyber projektu</h2>
+<?php $group = new Group(); if(!$group->existsGroupByLeader($_SESSION['uid'])): ?>
+    <div class="alert alert-danger">
+        Este nemate vytvorenu skupinu! Musite ju najskor <a href="<?= URL_BASE?>/public/groups/index">vytvorit</a>.
+    </div>
+<?php else: ?>
+
+
 <div class="alert alert-info alert-dismissable fade in">
     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
     Ohodnotte aspon jeden projekt podla preferencie.
@@ -94,3 +101,4 @@
     } ?>
     <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-save"></span> Ulozit zmeny</button>
 </form>
+<?php endif; ?>
