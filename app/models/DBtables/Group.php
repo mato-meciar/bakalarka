@@ -47,14 +47,10 @@ class Group {
         $skills = $mysql->validate($skills);
         $members = $mysql->validate($members);
         
-        $sql = "INSERT INTO skupina(nazov, email, veduci_id, schopnosti, clenovia)
-                VALUES('$name', '$email', '$leader_id', '$skills', '$members')";
-        if ($mysql->set($sql)) {
-            $sql = 'SELECT LAST_INSERT_ID()';
-            return $mysql->get_one($sql)[0];
-        } else {
-            return false;
-        }
+        $sql = "INSERT INTO skupina (nazov, email, veduci_id, schopnosti, clenovia, preferencie)
+                VALUES('$name', '$email', '$leader_id', '$skills', '$members', '')";
+        $result = $mysql->set($sql);
+        return true;
     }
     
     public function updategroup($group_id, $name, $email, $skills, $members) {

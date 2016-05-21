@@ -38,8 +38,8 @@ class API extends BaseController {
         $password = $_POST['password'];
         $role = $_POST['role'];
         if ($email != null && $password != null && $role != null) {
-            $user = $this->getLoggedUser();
-            $result = $this->getLoggedUser()->registerUser($email, md5($password), "NULL", $role);
+            $user = new User();
+            $result = $user->registerUser($email, $password, "NULL", $role);
             if ($result) {
                 $user->setUser($email, $role, $user->getUserUid($user->getEmail()));
                 $_SESSION['user'] = $user->getEmail();
@@ -113,7 +113,7 @@ class API extends BaseController {
             $result = $group->addGroup($name, $email, $leader_id, $skills, $members);
             if ($result) {
                 unset($_POST);
-                return true;
+                header("Location: ".URL_BASE."/public/groups");
             } else {
                 return false;
             }

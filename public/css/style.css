@@ -4,6 +4,7 @@
 
 body {
     overflow-x: hidden;
+    padding-top: 50px;
 }
 
 #well {
@@ -23,4 +24,12 @@ body {
 .col-centered{
     float: none;
     margin: 0 auto;
+}
+
+.active {
+    background: rgba(255,255,255,0.2);
+}
+
+.navbar li:hover {
+    background: rgba(255,255,255,0.2);
 }

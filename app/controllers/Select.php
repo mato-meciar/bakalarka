@@ -12,11 +12,11 @@
         }
         
         public function index() {
-            if ($GLOBALS['user']->isLoggedUser() && $GLOBALS['user']->hasLoggedUserAccess("uzivatel")) {
+            if (User::isLoggedUser() && User::hasLoggedUserAccess("uzivatel")) {
                 $project = new Project();
                     $listProjects = $project->getApprovedProjectList();
                     $group = new Group();
-                    $groupInfo = $group->getGroupByLeader($GLOBALS['user']->getUid());
+                    $groupInfo = $group->getGroupByLeader(User::getUid());
                     $this->view(array('listProjects' => $listProjects, 'groupInfo' => $groupInfo));
             } else {
                 header("Location: ".URL_BASE."/public/login");
