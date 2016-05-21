@@ -10,7 +10,7 @@
         }
         
         public function index() {
-            if ($GLOBALS['user']->isLoggedUser()) {
+            if (User::isLoggedUser()) {
                 $this->view('group/index');
             } else {
                 header("Location: ".URL_BASE."/public/login");
@@ -18,9 +18,9 @@
         }
         
         public function edit() {
-            if ($GLOBALS['user']->isLoggedUser()) {
+            if (User::isLoggedUser()) {
                 $group = new Group();
-                $groupInfo = $group->getGroupByLeader($_SESSION['uid']);
+                $groupInfo = $group->getGroupByLeader(User::getUid());
                 $this->view(array('groupInfo' => $groupInfo));
             }
         }

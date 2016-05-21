@@ -4,7 +4,7 @@ class User {
     public function __construct() {
     }
 
-    public function existsUserUid($uid) {
+    public static function existsUserUid($uid) {
         $mysql = new MySQL();
         $uid = $mysql->validate($uid);
 
@@ -12,7 +12,7 @@ class User {
         return boolval($mysql->get_one_assoc($sql)['exist']);
     }
     
-    public function existsUserEmail($email) {
+    public static function existsUserEmail($email) {
         $mysql = new MySQL();
         $email = $mysql->validate($email);
 
@@ -20,7 +20,7 @@ class User {
         return boolval($mysql->get_one_assoc($sql)['exist']);
     }
     
-    public function checkUser($email, $password) {
+    public static function checkUser($email, $password) {
         $mysql = new MySQL();
         $email = $mysql->validate($email);
         $password = md5($mysql->validate($password));
@@ -28,12 +28,12 @@ class User {
         $sql = "SELECT id, email, rola FROM pouzivatel WHERE email = '$email' AND heslo = '$password'";
         $result = $mysql->get_one_assoc($sql);
         if ($result != null) {
-            $GLOBALS['user']->setUser($result['email'], $result['rola'], $result['id']);
+            User::setUser($result['email'], $result['rola'], $result['id']);
         }
         return boolval($result != null);
     }
     
-    public function checkGoogleUser($google_id, $email) {
+    public static function checkGoogleUser($google_id, $email) {
         $newUser = false;
         $mysql = new MySQL();
         $google_id = $mysql->validate($google_id);
@@ -47,22 +47,23 @@ class User {
         } 
         $result = $mysql->get_one_assoc($sql);
         if ($result != null) {
-            $GLOBALS['user']->setUser($result['email'], $result['rola'], $result['id']);
+            User::setUser($result['email'], $result['rola'], $result['id']);
         }
         return $newUser;
     }
  
-    public function registerUser($email, $password, $google_id, $role) {
-        if (!$this->existsUserEmail($email)) {
+    public static function registerUser($email, $password, $google_id, $role) {
+        if (!User::existsUserEmail($email)) {
             $mysql = new MySQL();
             $email = $mysql->validate($email);
             $password = $mysql->validate($password);
+            $password = md5($password);
+
             $google_id = $mysql->validate($google_id);
             $role = $mysql->validate($role);
-            
             $sql = "INSERT INTO pouzivatel (id, google_id, email, heslo, rola) VALUES (NULL, '$google_id', '$email', '$password', '$role')";
             $mysql->set($sql);
-            $this->setUser($email, $role, $this->getUserUid($email));
+            User::setUser($email, $role, $this->getUserUid($email));
             return true;
         } else {
 //            user with given email already exists
@@ -71,7 +72,7 @@ class User {
         }
     }
     
-    public function getUserUid($email) {
+    public static function getUserUid($email) {
         $mysql = new MySQL();
         $email = $mysql->validate($email);
         
@@ -86,37 +87,37 @@ class User {
         return $this;
     }
     
-    public function getEmail() {
+    public static function getEmail() {
         if (isset($_SESSION['user'])) {
             return $_SESSION['user'];
         }
         return null;
     }
     
-    public function getRole() {
+    public static function getRole() {
         if (isset($_SESSION['role'])) {
             return $_SESSION['role'];
         }
         return null;
     }
     
-    public function getUid() {
+    public static function getUid() {
         if (isset($_SESSION['uid'])) {
             return $_SESSION['uid'];
         }
         return null;
     }
     
-    public function setUser($email, $role, $uid) {
+    public static function setUser($email, $role, $uid) {
         $_SESSION['user'] = $email;
         $_SESSION['role'] = $role;
         $_SESSION['uid'] = $uid;
     }
     
-    public function isLoggedUser() {
+    public static function isLoggedUser() {
         return isset($_SESSION['user']);
     }
-    public function hasLoggedUserAccess($access) {
+    public static function hasLoggedUserAccess($access) {
         if (isset($_SESSION['role'])) {
             return $_SESSION['role'] == $access;
         }

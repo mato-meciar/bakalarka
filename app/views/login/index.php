@@ -21,15 +21,15 @@ if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
 if (isset($authUrl)){ 
 } else {
     $googleUser = $service->userinfo->get();
-    $result = $GLOBALS['user']->checkGoogleUser($googleUser->id, $googleUser->email);
+    $result = User::checkGoogleUser($googleUser->id, $googleUser->email);
     header("Location: ".URL_BASE."/public/home");
 }
 ?>
 
 
+<div class="container-fluid">
 <h3>Prihlasenie</h3>
-
-<div class="col-md-3 well clearfix" id="form"> 
+<div class="span12 well clearfix" id="form"> 
     <form method="post" role="form" id="loginForm" data-toggle="validator">
         <div class="form-group">
             <input type="email" id="email" class="form-control" data-error="Neplatna e-mailova adresa" placeholder="Zadajte svoj e-mail" name="email" required value="<?php if (isset($_POST['email'])) echo $_POST['email'];?>">
@@ -47,7 +47,7 @@ if (isset($authUrl)){
 
     <?php
         if (isset($_POST['email']) && isset($_POST['password'])) {
-            $result = $GLOBALS['user']->checkUser($_POST['email'], $_POST['password']);
+            $result = User::checkUser($_POST['email'], $_POST['password']);
 //            $api = new API();
 //            $result = $api->login(); //TODO remove, change to logging in in User class
             if ($result) {
@@ -65,4 +65,5 @@ if (isset($authUrl)){
     <!--<a href="<?= $authUrl; ?>"><img class="login-button" src="<?= URL_BASE.'/public/images/google-login-button-normal.png'?>"></a>-->
     <a class="panel-body btn btn-group-justified" href="<?= $authUrl; ?>" class="login-button" title="Google prihlasenie"><img src="<?= URL_BASE.'/public/images/google-login-button-normal.png'?>" onmouseover="this.src='<?= URL_BASE.'/public/images/google-login-button-hover.png'?>'" onmouseout="this.src='<?= URL_BASE.'/public/images/google-login-button-normal.png'?>'"></a>
     <a class="panel-footer btn btn-group-justified" href="<?= URL_BASE ?>/public/register">Vytvorit uzivatela</a>
+</div>
 </div>

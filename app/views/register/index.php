@@ -1,5 +1,6 @@
+<div class="container-fluid">
 <h3>Registracia</h3>
-<div class="col-md-5 well">
+<div class="span12 well">
     <form method="post" role="form" id="registerForm" data-toggle="validator">
         <div class="form-group">
             Ste zadavatel?  <div class="radio"><input type="radio" id="role-1" name="role" value="zadavatel"><label for="role-1">ano</label></div>
@@ -26,9 +27,9 @@
     
     <?php
     require_once dirname(dirname(dirname(__FILE__)))."/controllers/API.php";
-    if (!$GLOBALS['user']->isLoggedUser()) {
+    if (!User::isLoggedUser()) {
         if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['role'])) {
-            $result = $GLOBALS['user']->registerUser($_POST['email'], $_POST['password'], "NULL", $_POST['role']);
+            $result = User::registerUser($_POST['email'], $_POST['password'], "NULL", $_POST['role']);
             if ($result) {
                 unset($_POST);
                 header("Location: ".URL_BASE."/public/home");
@@ -37,5 +38,5 @@
 }
 
     ?>
-    
+</div>    
 </div>

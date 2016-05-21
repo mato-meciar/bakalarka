@@ -1,3 +1,10 @@
+<?php
+    require_once dirname(dirname(dirname(__FILE__)))."/controllers/API.php";
+        if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['members']) && isset($_POST['skills'])) {
+            $api = new API();
+            $result = $api->createGroup();
+        }
+?>
 <h2>Vytvorenie skupiny</h2>
 <?php $group = new Group(); if(!$group->existsGroupByLeader($_SESSION['uid'])): ?>
     <div class="well">
@@ -8,7 +15,7 @@
             </div>
             <div class="form-group">
                 <label for="email">Kontaktny email</label>
-                <input type="email" class="form-control" id="email" name="email" data-error="Neplatna e-mailova adresa" required>
+                <input type="email" class="form-control" id="email" name="email" data-error="Neplatna e-mailova adresa" required value="<?=User::getEmail()?>">
                 <div class="help-block with-errors"></div>
             </div>
             <div class="form-group">
@@ -35,14 +42,3 @@
     jQuery(".tm-input-members").tagsManager({hiddenTagListName: 'members', delimiters: [44, 13]});
     jQuery(".tm-input-skills").tagsManager({hiddenTagListName: 'skills', delimiters: [44, 13]});
 </script>
-
-<?php
-    require_once dirname(dirname(dirname(__FILE__)))."/controllers/API.php";
-        if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['members']) && isset($_POST['skills'])) {
-            $api = new API();
-            $result = $api->createGroup();
-            if ($result) {
-                unset($_POST);
-            }
-        }
-?>

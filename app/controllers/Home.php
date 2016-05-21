@@ -6,7 +6,7 @@
             $this->setNavLinkActive('home');
         }
         public function index($data = '') {
-            if ($GLOBALS['user']->isLoggedUser()) {
+            if (User::isLoggedUser()) {
                 $this->View($data);
             } else {
                 $this->showLogin();
@@ -14,7 +14,7 @@
         }
         
         public function logout() {
-            if ($GLOBALS['user']->isLoggedUser()) {
+            if (User::isLoggedUser()) {
                 $this->userLogout();
                 header("Location: ".URL_BASE."/public/login");
             }

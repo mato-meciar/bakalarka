@@ -5,10 +5,6 @@ require_once dirname(dirname(__FILE__))."/models/DBtables/Access.php";
 require_once dirname(dirname(__FILE__))."/models/DBtables/User.php";
 include_once dirname(dirname(__FILE__)).'/config.php';
 
-if (!isset($GLOBALS['user'])) {
-    $GLOBALS['user'] = new User();
-} 
-
 class BaseController {
     
     
@@ -25,7 +21,6 @@ class BaseController {
     protected function userLogout() {
         global $client;
         unset($_SESSION['token']);
-        $GLOBALS['user'] = new User();
         unset($_SESSION['email']);
         unset($_SESSION['uid']);
         unset($_SESSION['role']);
@@ -33,21 +28,21 @@ class BaseController {
         session_destroy();
     }
     
-//    protected function isLoggedUser() {
-//        return $GLOBALS['user']->getEmail() != null;
-//    }
-//    
-//    protected function getLoggedUser() {
-//        return $GLOBALS['user'];
-//    }
-//    
-//    protected function getLoggedUserUID() {
-//        return $GLOBALS['user']->getUid();
-//    }
-//    
-//    protected function hasLoggedUserAccess($role) {
-//        return $GLOBALS['user']->getRole() == $role;
-//    }
+    protected function isLoggedUser() {
+        return (isset($_SESSION['email']) && isset($_SESSION['uid']) && isset($_SESSION['role']));
+    }
+    
+    protected function getLoggedUser() {
+        return $_SESSION['email'];
+    }
+    
+    protected function getLoggedUserUID() {
+        return $_SESSION['uid'];
+    }
+    
+    protected function hasLoggedUserAccess($role) {
+        return $_SESSION['role'] == $role;
+    }
 
     public function model($model) {
         require_once dirname(dirname(__FILE__)).'/models/' . $model . '.php';
