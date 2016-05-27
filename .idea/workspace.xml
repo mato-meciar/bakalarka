@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea3489e9-2040-48a8-be38-27c1c457b782" name="Default" comment="added contact mail to project creation/editing&#10;fixed project editing after assignment&#10;added project deletion for admin&#10;added index of projects for not logged user&#10;fixed group adding&#10;added marking of important project&#10;added date check for group creation&#10;added page for setting the date to check&#10;implemented generation algorithm for  automated project assignment&#10;added change the projects after automatic assignment proposal&#10;">
+    <list default="true" id="ea3489e9-2040-48a8-be38-27c1c457b782" name="Default" comment="small updates&#10;added intro page to automatic assignment">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/selection/welcome.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Selection.php" afterPath="$PROJECT_DIR$/app/controllers/Selection.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/core/GA.php" afterPath="$PROJECT_DIR$/app/core/GA.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/navigation.php" afterPath="$PROJECT_DIR$/app/views/navigation.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/selection/assign.php" afterPath="$PROJECT_DIR$/app/views/selection/assign.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/selection/edit.php" afterPath="$PROJECT_DIR$/app/views/selection/edit.php" />
     </list>
     <ignored path="bakalarka.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,102 +47,59 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/selection/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="51" selection-end-column="74" />
+            <state relative-caret-position="699">
+              <caret line="65" column="115" selection-start-line="65" selection-start-column="115" selection-end-line="65" selection-end-column="115" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/projects/index.php">
+      <file leaf-file-name="navigation.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/navigation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="34" column="78" selection-start-line="34" selection-start-column="78" selection-end-line="34" selection-end-column="78" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Group.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/DBtables/Group.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1309">
-              <caret line="77" column="77" selection-start-line="77" selection-start-column="77" selection-end-line="77" selection-end-column="77" />
+            <state relative-caret-position="512">
+              <caret line="48" column="56" selection-start-line="48" selection-start-column="56" selection-end-line="48" selection-end-column="56" />
               <folding>
-                <marker date="1464357963286" expanded="true" signature="118:217" ph="SELECT s.id,... skupina" />
-                <marker date="1464357963286" expanded="true" signature="351:495" ph="SELECT s.id,... skupina" />
-                <marker date="1464357963286" expanded="true" signature="684:823" ph="SELECT s.id,... skupina" />
-                <marker date="1464357963286" expanded="true" signature="1026:1102" ph="SELECT EXIST... " />
-                <marker date="1464357963286" expanded="true" signature="1041:1092" ph="SELECT * FRO... skupina" />
-                <marker date="1464357963286" expanded="true" signature="1326:1488" ph="SELECT s.id,... skupina" />
-                <marker date="1464357963286" expanded="true" signature="1899:2062" ph="INSERT INTO skupina... " />
-                <marker date="1464357963286" expanded="true" signature="2492:2526" ph="UPDATE skupi... " />
-                <marker date="1464357963286" expanded="true" signature="2492:2527" ph="UPDATE skupi... " />
-                <marker date="1464357963286" expanded="true" signature="2492:2575" ph="UPDATE skupi... " />
-                <marker date="1464357963286" expanded="true" signature="2492:2584" ph="UPDATE skupi... " />
-                <marker date="1464357963286" expanded="true" signature="2492:2586" ph="UPDATE skupi... " />
-                <marker date="1464357963286" expanded="true" signature="2492:2614" ph="UPDATE skupi... " />
-                <marker date="1464357963286" expanded="true" signature="2492:2646" ph="UPDATE skupi... " />
-                <marker date="1464357963286" expanded="true" signature="2492:2656" ph="UPDATE skupi... " />
-                <marker date="1464357963286" expanded="true" signature="2492:2686" ph="UPDATE skupi... " />
-                <marker date="1464357963286" expanded="true" signature="2492:2724" ph="UPDATE skupi... " />
-                <marker date="1464357963286" expanded="true" signature="2492:2735" ph="UPDATE skupi... " />
-                <marker date="1464357963286" expanded="true" signature="2492:2765" ph="UPDATE skupi... " />
-                <marker date="1464357963286" expanded="true" signature="2492:2802" ph="UPDATE skupi... " />
-                <marker date="1464357963286" expanded="true" signature="2492:2814" ph="UPDATE skupi... " />
-                <marker date="1464357963286" expanded="true" signature="2492:2816" ph="UPDATE skupi... " />
-                <marker date="1464357963286" expanded="true" signature="2492:2853" ph="UPDATE skupi... " />
-                <marker date="1464357963286" expanded="true" signature="2492:2854" ph="UPDATE skupi... " />
-                <marker date="1464357963286" expanded="true" signature="2492:2865" ph="UPDATE skupi... " />
-                <marker date="1464357963286" expanded="true" signature="2492:2868" ph="UPDATE skupi... " />
-                <marker date="1464357963286" expanded="true" signature="3090:3220" ph="UPDATE skupi... " />
+                <marker date="1464364284238" expanded="true" signature="1215:1259" ph="..." />
+                <marker date="1464364284238" expanded="true" signature="1466:1500" ph="..." />
+                <marker date="1464364284238" expanded="true" signature="3621:3664" ph="..." />
+                <marker date="1464364284238" expanded="true" signature="3871:3905" ph="..." />
+                <marker date="1464364284238" expanded="true" signature="4913:4956" ph="..." />
+                <marker date="1464364284238" expanded="true" signature="5229:5263" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Project.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/models/DBtables/Project.php">
+      <file leaf-file-name="assign.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/selection/assign.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="184" column="74" selection-start-line="184" selection-start-column="74" selection-end-line="184" selection-end-column="74" />
+            <state relative-caret-position="682">
+              <caret line="62" column="51" selection-start-line="62" selection-start-column="19" selection-end-line="62" selection-end-column="51" />
               <folding>
-                <marker date="1464357963215" expanded="true" signature="165:357" ph="SELECT p.id,... projekt" />
-                <marker date="1464357963215" expanded="true" signature="165:371" ph="SELECT p.id,... projekt" />
-                <marker date="1464357963215" expanded="true" signature="411:574" ph="SELECT p.id,... projekt" />
-                <marker date="1464357963215" expanded="true" signature="411:588" ph="SELECT p.id,... projekt" />
-                <marker date="1464357963215" expanded="true" signature="732:861" ph="SELECT p.id,... projekt" />
-                <marker date="1464357963215" expanded="true" signature="732:973" ph="SELECT p.id,... projekt" />
-                <marker date="1464357963215" expanded="true" signature="1112:1309" ph="SELECT p.id,... projekt" />
-                <marker date="1464357963215" expanded="true" signature="1112:1323" ph="SELECT p.id,... projekt" />
-                <marker date="1464357963215" expanded="true" signature="1469:1666" ph="SELECT p.id,... projekt" />
-                <marker date="1464357963215" expanded="true" signature="1469:1680" ph="SELECT p.id,... projekt" />
-                <marker date="1464357963215" expanded="true" signature="1814:2045" ph="SELECT p.id,... projekt" />
-                <marker date="1464357963215" expanded="true" signature="1814:2055" ph="SELECT p.id,... projekt" />
-                <marker date="1464357963215" expanded="true" signature="2183:2292" ph="SELECT p.id,... projekt" />
-                <marker date="1464357963215" expanded="true" signature="2183:2302" ph="SELECT p.id,... projekt" />
-                <marker date="1464357963215" expanded="true" signature="2547:2645" ph="SELECT COUNT... projekt" />
-                <marker date="1464357963215" expanded="true" signature="2853:3073" ph="SELECT p.id,... projekt" />
-                <marker date="1464357963215" expanded="true" signature="3252:3342" ph="SELECT p.id,... projekt" />
-                <marker date="1464357963215" expanded="true" signature="3572:3823" ph="SELECT id, (... projekt" />
-                <marker date="1464357963215" expanded="true" signature="4235:4303" ph="UPDATE proje... " />
-                <marker date="1464357963215" expanded="true" signature="4235:4304" ph="UPDATE proje... " />
-                <marker date="1464357963215" expanded="true" signature="4235:4321" ph="UPDATE proje... " />
-                <marker date="1464357963215" expanded="true" signature="4235:4349" ph="UPDATE proje... " />
-                <marker date="1464357963215" expanded="true" signature="4235:4364" ph="UPDATE proje... " />
-                <marker date="1464357963215" expanded="true" signature="4478:4572" ph="UPDATE proje... " />
-                <marker date="1464357963215" expanded="true" signature="4478:4573" ph="UPDATE proje... " />
-                <marker date="1464357963215" expanded="true" signature="4607:4708" ph="UPDATE nasta... " />
-                <marker date="1464357963215" expanded="true" signature="5264:5483" ph="INSERT INTO projekt... " />
-                <marker date="1464357963215" expanded="true" signature="6290:6739" ph="UPDATE proje... " />
-                <marker date="1464357963215" expanded="true" signature="6290:6839" ph="UPDATE proje... " />
-                <marker date="1464357963215" expanded="true" signature="6290:6850" ph="UPDATE proje... " />
-                <marker date="1464357963215" expanded="true" signature="6290:6864" ph="UPDATE proje... " />
-                <marker date="1464357963215" expanded="true" signature="6290:6916" ph="UPDATE proje... " />
-                <marker date="1464357963215" expanded="true" signature="7109:7227" ph="UPDATE proje... " />
-                <marker date="1464357963215" expanded="true" signature="7399:7467" ph="DELETE FROM " />
-                <marker date="1464357963215" expanded="true" signature="7410:7467" ph="UPDATE proje... " />
+                <element signature="n#remove_accents#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="welcome.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/selection/welcome.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GA.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/core/GA.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+              <folding>
+                <element signature="e#512#6081#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -147,6 +110,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="Martin Martin Mečiar" />
         <option value="Martin Mečiar" />
       </list>
     </option>
@@ -157,8 +121,6 @@
       <list>
         <option value="$PROJECT_DIR$/public/index.php" />
         <option value="$PROJECT_DIR$/public/js/scripts.js" />
-        <option value="$PROJECT_DIR$/app/views/selection/edit.php" />
-        <option value="$PROJECT_DIR$/app/views/navigation.php" />
         <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/app/views/settings/index.php" />
         <option value="$PROJECT_DIR$/app/views/projects/approval.php" />
@@ -172,7 +134,6 @@
         <option value="$PROJECT_DIR$/app/controllers/Home.php" />
         <option value="$PROJECT_DIR$/app/controllers/Login.php" />
         <option value="$PROJECT_DIR$/app/controllers/Select.php" />
-        <option value="$PROJECT_DIR$/app/controllers/Selection.php" />
         <option value="$PROJECT_DIR$/app/controllers/Settings.php" />
         <option value="$PROJECT_DIR$/app/views/login/index2.php" />
         <option value="$PROJECT_DIR$/app/views/register/index.php" />
@@ -182,7 +143,6 @@
         <option value="$PROJECT_DIR$/app/controllers/Projects.php" />
         <option value="$PROJECT_DIR$/app/views/create_project/index.php" />
         <option value="$PROJECT_DIR$/app/models/DBtables/User.php" />
-        <option value="$PROJECT_DIR$/app/views/selection/assign.php" />
         <option value="$PROJECT_DIR$/app/views/login/index.php" />
         <option value="$PROJECT_DIR$/app/views/welcome/index.php" />
         <option value="$PROJECT_DIR$/app/core/BaseController.php" />
@@ -192,9 +152,14 @@
         <option value="$PROJECT_DIR$/app/models/DBtables/Group.php" />
         <option value="$PROJECT_DIR$/app/views/groups/edit.php" />
         <option value="$PROJECT_DIR$/app/views/groups/index.php" />
-        <option value="$PROJECT_DIR$/app/views/selection/index.php" />
-        <option value="$PROJECT_DIR$/app/core/GA.php" />
         <option value="$PROJECT_DIR$/app/views/projects/index.php" />
+        <option value="$PROJECT_DIR$/app/views/selection/index.php" />
+        <option value="$PROJECT_DIR$/app/views/selection/edit.php" />
+        <option value="$PROJECT_DIR$/app/controllers/Selection.php" />
+        <option value="$PROJECT_DIR$/app/core/GA.php" />
+        <option value="$PROJECT_DIR$/app/views/selection/assign.php" />
+        <option value="$PROJECT_DIR$/app/views/navigation.php" />
+        <option value="$PROJECT_DIR$/app/views/selection/welcome.php" />
       </list>
     </option>
   </component>
@@ -645,8 +610,16 @@
       <workItem from="1464243832376" duration="47552000" />
       <workItem from="1464329801733" duration="15672000" />
       <workItem from="1464348449713" duration="9552000" />
-      <workItem from="1464358333510" duration="117000" />
+      <workItem from="1464358333510" duration="3916000" />
     </task>
+    <task id="LOCAL-00001" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;">
+      <created>1464358464833</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1464358464833</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -655,7 +628,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="200205000" />
+    <option name="totallyTimeSpent" value="204004000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -665,7 +638,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12953092" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -698,7 +671,9 @@
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="added contact mail to project creation/editing&#10;fixed project editing after assignment&#10;added project deletion for admin&#10;added index of projects for not logged user&#10;fixed group adding&#10;added marking of important project&#10;added date check for group creation&#10;added page for setting the date to check&#10;implemented generation algorithm for  automated project assignment&#10;added change the projects after automatic assignment proposal&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="added contact mail to project creation/editing&#10;fixed project editing after assignment&#10;added project deletion for admin&#10;added index of projects for not logged user&#10;fixed group adding&#10;added marking of important project&#10;added date check for group creation&#10;added page for setting the date to check&#10;implemented generation algorithm for  automated project assignment&#10;added change the projects after automatic assignment proposal&#10;" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;" />
+    <MESSAGE value="small updates&#10;added intro page to automatic assignment" />
+    <option name="LAST_COMMIT_MESSAGE" value="small updates&#10;added intro page to automatic assignment" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -710,17 +685,11 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/home/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_1.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="303">
           <caret line="551" column="9" selection-start-line="551" selection-start-column="9" selection-end-line="551" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -763,13 +732,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/navigation.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -823,13 +785,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/Selection.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="34" column="38" selection-start-line="34" selection-start-column="38" selection-end-line="34" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/807e4eef/4ed02bfe-b1ab-4c3c-844b-b476f1ce82d7/projekty.skupina">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -860,20 +815,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
           <caret line="21" column="45" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/select/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="34" column="55" selection-start-line="34" selection-start-column="55" selection-end-line="34" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/selection/edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -1066,24 +1007,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/selection/assign.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="41" column="81" selection-start-line="41" selection-start-column="81" selection-end-line="41" selection-end-column="81" />
-          <folding>
-            <element signature="n#remove_accents#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/core/GA.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/807e4eef/4ed02bfe-b1ab-4c3c-844b-b476f1ce82d7/projekty.projekt">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1096,25 +1019,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/selection/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="51" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/projects/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="78" selection-start-line="34" selection-start-column="78" selection-end-line="34" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/DBtables/Group.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1309">
+        <state relative-caret-position="461">
           <caret line="77" column="77" selection-start-line="77" selection-start-column="77" selection-end-line="77" selection-end-column="77" />
           <folding>
             <marker date="1464357963286" expanded="true" signature="118:217" ph="SELECT s.id,... skupina" />
@@ -1148,10 +1055,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/projects/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="34" column="78" selection-start-line="34" selection-start-column="78" selection-end-line="34" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/DBtables/Project.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="184" column="74" selection-start-line="184" selection-start-column="74" selection-end-line="184" selection-end-column="74" />
+        <state relative-caret-position="340">
+          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
           <folding>
             <marker date="1464357963215" expanded="true" signature="165:357" ph="SELECT p.id,... projekt" />
             <marker date="1464357963215" expanded="true" signature="165:371" ph="SELECT p.id,... projekt" />
@@ -1189,6 +1104,81 @@
             <marker date="1464357963215" expanded="true" signature="7399:7467" ph="DELETE FROM " />
             <marker date="1464357963215" expanded="true" signature="7410:7467" ph="UPDATE proje... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/select/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="31" column="6" selection-start-line="28" selection-start-column="0" selection-end-line="31" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/Selection.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/selection/edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-32">
+          <caret line="2" column="68" selection-start-line="2" selection-start-column="68" selection-end-line="2" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/core/GA.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+          <folding>
+            <element signature="e#512#6081#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/selection/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="699">
+          <caret line="65" column="115" selection-start-line="65" selection-start-column="115" selection-end-line="65" selection-end-column="115" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/navigation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="48" column="56" selection-start-line="48" selection-start-column="56" selection-end-line="48" selection-end-column="56" />
+          <folding>
+            <marker date="1464364284238" expanded="true" signature="1215:1259" ph="..." />
+            <marker date="1464364284238" expanded="true" signature="1466:1500" ph="..." />
+            <marker date="1464364284238" expanded="true" signature="3621:3664" ph="..." />
+            <marker date="1464364284238" expanded="true" signature="3871:3905" ph="..." />
+            <marker date="1464364284238" expanded="true" signature="4913:4956" ph="..." />
+            <marker date="1464364284238" expanded="true" signature="5229:5263" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/selection/assign.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="62" column="51" selection-start-line="62" selection-start-column="19" selection-end-line="62" selection-end-column="51" />
+          <folding>
+            <element signature="n#remove_accents#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/selection/welcome.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
+          <folding />
         </state>
       </provider>
     </entry>

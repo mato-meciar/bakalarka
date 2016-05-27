@@ -1,5 +1,5 @@
 <?php
-require_once dirname(dirname(dirname(__FILE__))) . "/core/GA.php";
+//require_once dirname(dirname(dirname(__FILE__))) . "/core/GA.php";
 require_once dirname(dirname(dirname(__FILE__))) . "/models/DBtables/Group.php";
 require_once dirname(dirname(dirname(__FILE__))) . "/models/DBtables/Project.php";
 

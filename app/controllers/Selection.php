@@ -8,6 +8,14 @@ class Selection extends ViewController {
 		$this->setNavLinkActive('selection');
 	}
 
+	public function welcome() {
+		if (User::isLoggedUser() && User::hasLoggedUserAccess("admin")) {
+			$this->view();
+		} else {
+//			self::redirect(URL_BASE . "/public/login");
+		}
+	}
+
 	public function index() {
 		if (User::isLoggedUser() && User::hasLoggedUserAccess("admin")) {
 			$this->view();

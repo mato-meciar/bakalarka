@@ -46,7 +46,7 @@
                                 echo $this->isNavLinkActive('selection') ? 'active' : '';
                                 echo '" href="';
                                 echo URL_BASE;
-                                echo '/public/selection">Priradenie projektov</a></li>';
+                                echo '/public/selection/welcome">Priradenie projektov</a></li>';
             echo '</ul>';
             echo '<ul class="nav navbar-nav navbar-right">';
                                 echo '<li><a class="';

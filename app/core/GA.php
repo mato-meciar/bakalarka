@@ -7,10 +7,10 @@ define("PREF_MATCH_1", 3);
 define("PREF_MATCH_2", 7);
 define("PREF_MATCH_3", 10);
 define("PREF_MATCH_4", 25);
-define("IMPORTANT_MATCH", 35);
+define("IMPORTANT_MATCH", 100);
 define("TOURNAMENT_SIZE", 5);
-define("GENERATIONS", 10000);
-define("POPULATION_SIZE", 5000);
+define("GENERATIONS", 100);
+define("POPULATION_SIZE", 50);
 define("ALPHABET", 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()-+,. ');
 
 function remove_accents($string) {
@@ -133,6 +133,14 @@ class ProjectsCharacteristics {
 			self::$mapping[$i] = self::$projectsList[$i]['id'];
 		}
 		self::$len = sizeof(self::$characteristics);
+	}
+
+	static function isImportant($index) {
+		if (self::$projectsList[$index]['dolezity'] == 1) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	static function getId($index) {
@@ -287,6 +295,11 @@ class Permutation {
 	function fitness() {
 		$this->fitness = 0;
 		for ($i = 0; $i < strlen($this->permutation); ++$i) {
+			if (self::$groupCheracteristics->getGroupCharacteristics($this->permutation[$i]) != null) {
+				if (ProjectsCharacteristics::isImportant($i)) {
+					$this->fitness += IMPORTANT_MATCH;
+				}
+			}
 			foreach (explode(',', self::$projectsCharacteristics->getCharacteristics($i)) as $skill) {
 				if (in_array($skill, explode(',', self::$groupCheracteristics->getGroupCharacteristics($this->permutation[$i])))) {
 					$this->fitness += SKILL_MATCH;

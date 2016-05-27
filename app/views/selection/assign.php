@@ -52,6 +52,13 @@ foreach ($projectList as $projekt) {
 ?>
 
 	<h2>Projekty úspešne pridelené!</h2><br>
+	<div>
+		<div class="alert alert-info alert-dismissable fade in">
+			<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			Zadávateľom a skupinám boli rozposlané automatické e-maily s informáciou o výsledku priraďovacieho procesu
+			a vzájomným kontaktom.
+		</div>
+	</div>
 	<a class="btn btn-info" href="<?= URL_BASE . '/public/selection' ?>"><span
 			class="glyphicon glyphicon-chevron-left"></span> Späť</a>
 
