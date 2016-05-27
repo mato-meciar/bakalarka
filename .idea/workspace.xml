@@ -2,34 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea3489e9-2040-48a8-be38-27c1c457b782" name="Default" comment="added contact mail to project creation/editing&#10;fixed project editing after assignment&#10;added project deletion for admin&#10;added index of projects for not logged user&#10;fixed group adding&#10;added marking of important project&#10;added date check for group creation&#10;added page for setting the date to check&#10;implemented generation algorithm for  automated project assignment&#10;added change the projects after automatic assignment proposal&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/core/GA.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/groups/show.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/projects/delete.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/selection/assign.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/selection/edit.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/settings/index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/bootstrap-datetimepicker.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/affix.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/alert.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/bootstrap-datetimepicker.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/button.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/carousel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/collapse.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/dropdown.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/jquery-2.2.4.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/modal.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/moment.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/popover.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/scrollspy.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/sortable.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tab.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/tooltip.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/transition.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="bakalarka.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
+    <ignored path=".idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,24 +30,6 @@
         <option name="myItemId" />
         <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
       </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="MySQL - projekty@localhost" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="MySQL - projekty@localhost" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="projekt" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
     </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
@@ -81,7 +41,7 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/selection/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
+            <state relative-caret-position="782">
               <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="51" selection-end-column="74" />
               <folding />
             </state>
@@ -91,7 +51,7 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/projects/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
+            <state relative-caret-position="578">
               <caret line="34" column="78" selection-start-line="34" selection-start-column="78" selection-end-line="34" selection-end-column="78" />
               <folding />
             </state>
@@ -101,7 +61,7 @@
       <file leaf-file-name="Group.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/DBtables/Group.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="188">
+            <state relative-caret-position="1309">
               <caret line="77" column="77" selection-start-line="77" selection-start-column="77" selection-end-line="77" selection-end-column="77" />
               <folding>
                 <marker date="1464357963286" expanded="true" signature="118:217" ph="SELECT s.id,... skupina" />
@@ -139,7 +99,7 @@
       <file leaf-file-name="Project.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/models/DBtables/Project.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
+            <state relative-caret-position="258">
               <caret line="184" column="74" selection-start-line="184" selection-start-column="74" selection-end-line="184" selection-end-column="74" />
               <folding>
                 <marker date="1464357963215" expanded="true" signature="165:357" ph="SELECT p.id,... projekt" />
@@ -184,12 +144,75 @@
       </file>
     </leaf>
   </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Martin Mečiar" />
+      </list>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/public/index.php" />
+        <option value="$PROJECT_DIR$/public/js/scripts.js" />
+        <option value="$PROJECT_DIR$/app/views/selection/edit.php" />
+        <option value="$PROJECT_DIR$/app/views/navigation.php" />
+        <option value="$PROJECT_DIR$/public/css/style.css" />
+        <option value="$PROJECT_DIR$/app/views/settings/index.php" />
+        <option value="$PROJECT_DIR$/app/views/projects/approval.php" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/4ed02bfe-b1ab-4c3c-844b-b476f1ce82d7/console.sql" />
+        <option value="$PROJECT_DIR$/app/views/projects/approve.php" />
+        <option value="$PROJECT_DIR$/app/views/projects/delete.php" />
+        <option value="$PROJECT_DIR$/app/views/groups/show.php" />
+        <option value="$PROJECT_DIR$/app/views/body.php" />
+        <option value="$PROJECT_DIR$/app/controllers/Create_project.php" />
+        <option value="$PROJECT_DIR$/app/controllers/Groups.php" />
+        <option value="$PROJECT_DIR$/app/controllers/Home.php" />
+        <option value="$PROJECT_DIR$/app/controllers/Login.php" />
+        <option value="$PROJECT_DIR$/app/controllers/Select.php" />
+        <option value="$PROJECT_DIR$/app/controllers/Selection.php" />
+        <option value="$PROJECT_DIR$/app/controllers/Settings.php" />
+        <option value="$PROJECT_DIR$/app/views/login/index2.php" />
+        <option value="$PROJECT_DIR$/app/views/register/index.php" />
+        <option value="$PROJECT_DIR$/app/views/select/index.php" />
+        <option value="$PROJECT_DIR$/app/core/ViewController.php" />
+        <option value="$PROJECT_DIR$/app/views/projects/detail.php" />
+        <option value="$PROJECT_DIR$/app/controllers/Projects.php" />
+        <option value="$PROJECT_DIR$/app/views/create_project/index.php" />
+        <option value="$PROJECT_DIR$/app/models/DBtables/User.php" />
+        <option value="$PROJECT_DIR$/app/views/selection/assign.php" />
+        <option value="$PROJECT_DIR$/app/views/login/index.php" />
+        <option value="$PROJECT_DIR$/app/views/welcome/index.php" />
+        <option value="$PROJECT_DIR$/app/core/BaseController.php" />
+        <option value="$PROJECT_DIR$/app/models/DBtables/Project.php" />
+        <option value="$PROJECT_DIR$/app/views/projects/edit.php" />
+        <option value="$PROJECT_DIR$/app/controllers/API.php" />
+        <option value="$PROJECT_DIR$/app/models/DBtables/Group.php" />
+        <option value="$PROJECT_DIR$/app/views/groups/edit.php" />
+        <option value="$PROJECT_DIR$/app/views/groups/index.php" />
+        <option value="$PROJECT_DIR$/app/views/selection/index.php" />
+        <option value="$PROJECT_DIR$/app/core/GA.php" />
+        <option value="$PROJECT_DIR$/app/views/projects/index.php" />
+      </list>
+    </option>
+  </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="NamedScopeManager">
+    <scope name="project" pattern="!file[bakalarka]:db template dump/*&amp;&amp;!file[bakalarka]:nbproject/*&amp;&amp;!file[bakalarka]:public/*&amp;&amp;!file:.gitignore&amp;&amp;!file:README.md&amp;&amp;!file:app/.htaccess&amp;&amp;!file[bakalarka]:app/libraries/*&amp;&amp;!file[bakalarka]:app/libraries//*" />
+  </component>
+  <component name="PhpServers">
+    <servers>
+      <server host="http://localhost" id="a17de424-9ee5-4b12-9fa7-47703677a731" name="localhost" />
+    </servers>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 5.6" />
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
@@ -525,7 +548,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -536,42 +558,150 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.idea" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Ignored.Files" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$3/SQL Dialects" value="MySQL" />
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.public">
+    <configuration default="false" name="public" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" engineId="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" uri="http://localhost/bakalarka/public">
+      <method />
+    </configuration>
+    <configuration default="false" name="bakalarka" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner directory="$PROJECT_DIR$" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" browser="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" server_name="localhost" start_url="/bakalarka/public">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.public" />
+      <item index="1" class="java.lang.String" itemvalue="PHPUnit.bakalarka" />
+    </list>
+    <recent_temporary>
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.public" />
+        <item index="1" class="java.lang.String" itemvalue="PHPUnit.bakalarka" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ea3489e9-2040-48a8-be38-27c1c457b782" name="Default" comment="" />
+      <created>1463863947481</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1463863947481</updated>
+      <workItem from="1463863948617" duration="101000" />
+      <workItem from="1463899089587" duration="21000" />
+      <workItem from="1463899127438" duration="34877000" />
+      <workItem from="1464035852929" duration="632000" />
+      <workItem from="1464037915250" duration="9671000" />
+      <workItem from="1464076646050" duration="47145000" />
+      <workItem from="1464164344474" duration="34849000" />
+      <workItem from="1464243774138" duration="16000" />
+      <workItem from="1464243832376" duration="47552000" />
+      <workItem from="1464329801733" duration="15672000" />
+      <workItem from="1464348449713" duration="9552000" />
+      <workItem from="1464358333510" duration="117000" />
+    </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="bakalarka - 2016.05.22 at 08h 41m 05s.xml">
+      <configuration name="bakalarka" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19000" />
+    <option name="totallyTimeSpent" value="200205000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14285715" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26435536" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.141258" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12953092" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31060606" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997833" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="PHP-CGI Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26435536" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31060606" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997833" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="added contact mail to project creation/editing&#10;fixed project editing after assignment&#10;added project deletion for admin&#10;added index of projects for not logged user&#10;fixed group adding&#10;added marking of important project&#10;added date check for group creation&#10;added page for setting the date to check&#10;implemented generation algorithm for  automated project assignment&#10;added change the projects after automatic assignment proposal&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="added contact mail to project creation/editing&#10;fixed project editing after assignment&#10;added project deletion for admin&#10;added index of projects for not logged user&#10;fixed group adding&#10;added marking of important project&#10;added date check for group creation&#10;added page for setting the date to check&#10;implemented generation algorithm for  automated project assignment&#10;added change the projects after automatic assignment proposal&#10;" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -591,7 +721,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="303">
           <caret line="551" column="9" selection-start-line="551" selection-start-column="9" selection-end-line="551" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -843,7 +972,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -859,7 +987,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="14" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -953,10 +1080,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="30" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
-          <folding>
-            <element signature="e#511#5708#0#PHP" expanded="false" />
-            <element signature="e#10935#11874#0#PHP" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -969,13 +1093,12 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/selection/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
+        <state relative-caret-position="782">
           <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="51" selection-end-column="74" />
           <folding />
         </state>
@@ -983,7 +1106,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/projects/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
+        <state relative-caret-position="578">
           <caret line="34" column="78" selection-start-line="34" selection-start-column="78" selection-end-line="34" selection-end-column="78" />
           <folding />
         </state>
@@ -991,7 +1114,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/DBtables/Group.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
+        <state relative-caret-position="1309">
           <caret line="77" column="77" selection-start-line="77" selection-start-column="77" selection-end-line="77" selection-end-column="77" />
           <folding>
             <marker date="1464357963286" expanded="true" signature="118:217" ph="SELECT s.id,... skupina" />
@@ -1027,7 +1150,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/models/DBtables/Project.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
+        <state relative-caret-position="258">
           <caret line="184" column="74" selection-start-line="184" selection-start-column="74" selection-end-line="184" selection-end-column="74" />
           <folding>
             <marker date="1464357963215" expanded="true" signature="165:357" ph="SELECT p.id,... projekt" />
@@ -1069,5 +1192,24 @@
         </state>
       </provider>
     </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <last-edited>project</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+          <order>
+            <scope name="project" />
+          </order>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
