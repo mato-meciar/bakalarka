@@ -1,8 +1,8 @@
 <?php
-    require_once dirname(dirname(dirname(__FILE__)))."/models/DBtables/Project.php";
+require_once dirname(dirname(dirname(__FILE__))) . "/models/DBtables/Project.php";
+Project::approve($data['projectId']); ?>
 
-    $project = new Project();
-    $project->approve($data['projectID']); ?>
-<h2>Projekt uspesne schvaleny!</h2><br>
-<button id="back" class="btn btn-danger" onclick="window.history.go(-2); return false;"><span class="glyphicon glyphicon-chevron-left"></span> Spat</button>
+<h2>Projekt úspešne schválený!</h2><br>
+<a class="btn btn-info" href="<?= URL_BASE . '/public/projects/approval' ?>"><span
+		class="glyphicon glyphicon-chevron-left"></span> Späť</a>
 

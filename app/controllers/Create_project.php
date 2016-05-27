@@ -11,7 +11,7 @@
             if (User::isLoggedUser()) {
                 $this->view('create_project/index');
             } else {
-                header("Location: ".URL_BASE."/public/login");
+                self::redirect(URL_BASE . "/public/login");
             }
         }
 

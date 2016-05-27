@@ -1,9 +1,9 @@
-<h2>Zoznam projektov cakajucich na schvalenie</h2>
+<h2>Zoznam projektov čakajúcich na schválenie</h2>
 
 <table class="table table-hover table-bordered table-list-link">
     <thead>
         <tr>
-            <th style="width: 150px;">Nazov</th>
+            <th style="width: 150px;">Názov</th>
             <th>Popis</th>
         </tr>
     </thead>

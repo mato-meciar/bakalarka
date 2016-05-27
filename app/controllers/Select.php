@@ -2,7 +2,6 @@
     require_once dirname(dirname(__FILE__))."/models/DBtables/Project.php";
     require_once dirname(dirname(__FILE__))."/models/DBtables/Group.php";
 
-
     class Select extends ViewController {
         
         
@@ -13,13 +12,11 @@
         
         public function index() {
             if (User::isLoggedUser() && User::hasLoggedUserAccess("uzivatel")) {
-                $project = new Project();
-                    $listProjects = $project->getApprovedProjectList();
-                    $group = new Group();
-                    $groupInfo = $group->getGroupByLeader(User::getUid());
+                $listProjects = Project::getApprovedProjectList();
+                $groupInfo = Group::getGroupByLeader(User::getUid($_SESSION['user']));
                     $this->view(array('listProjects' => $listProjects, 'groupInfo' => $groupInfo));
             } else {
-                header("Location: ".URL_BASE."/public/login");
+                self::redirect(URL_BASE . "/public/login");
             }
         }
 

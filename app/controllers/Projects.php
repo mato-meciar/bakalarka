@@ -1,6 +1,7 @@
 <?php
 
     require_once dirname(dirname(__FILE__))."/models/DBtables/Project.php";
+require_once dirname(dirname(__FILE__)) . "/controllers/API.php";
 
     class Projects extends ViewController {
         
@@ -10,58 +11,68 @@
         }
         
         public function index($own = 'false') {
-            $project = new Project();
             if (User::isLoggedUser()) {
                 if ($own == 'true') {
-                    $listProjects = $project->getProjectList(User::getUid());
+	                $listProjects = Project::getProjectList(User::getUid($_SESSION['user']));
                     $this->view(array('listProjects' => $listProjects));
                 } else {
                     if (User::hasLoggedUserAccess("uzivatel")) {
-                        $listProjects = $project->getApprovedProjectList();
-                        $this->view(array('listProjects' => $listProjects));
+	                    if (intval($_SESSION['boli_pridelene']) == 1) {
+		                    $listProjects = Project::getAssignedProjectList();
+	                    } else {
+		                    $listProjects = Project::getApprovedProjectList();
+	                    }
+                    } elseif (User::hasLoggedUserAccess("zadavatel") || User::hasLoggedUserAccess("admin")) {
+	                    $listProjects = Project::getApprovedProjectList();
                     }
-                    $listProjects = $project->getProjectList();
-                    $this->view(array('listProjects' => $listProjects));
                 }
             } else {
-                $listProjects = $project->getApprovedProjectList();
-                $this->view(array('listProjects' => $listProjects));
+	            if (intval(API::getAssignedSetting()) == 1) {
+		            $listProjects = Project::getAssignedProjectList();
+	            } else {
+		            $listProjects = Project::getApprovedProjectList();
+	            }
             }
+	        $this->view(array('listProjects' => $listProjects));
         }
-        
-        public function detail($projectID) {
-            $project = new Project();
-            $projectInfo = $project->getProject($projectID);
+
+	    public function detail($projectId) {
+		    $projectInfo = Project::getProject($projectId);
             $this->view(array('projectInfo' => $projectInfo));
         }
-        
-        public function edit($projectID) {
+
+	    public function edit($projectId) {
             if (User::isLoggedUser()) {
-                $project = new Project();
-                $projectInfo = $project->getProject($projectID);
+	            $projectInfo = Project::getProject($projectId);
                 $this->view(array('projectInfo' => $projectInfo));
             } else {
-                header("Location: ".URL_BASE."/public/login");
+	            self::redirect(URL_BASE . "/public/login");
             }
         }
         
         public function approval() {
             if (User::isLoggedUser()) {
-                $project = new Project();
-                $listProjects = $project->getUnapprovedProjectList();
+	            $listProjects = Project::getUnapprovedProjectList();
                 $this->view(array('listProjects' => $listProjects));
             } else {
-                header("Location: ".URL_BASE."/public/login");
-            }
-        }
-        
-        public function approve($projectID) {
-            if (User::isLoggedUser()) {
-                $this->view(array('projectID' => $projectID));
-                // header("Location: ".URL_BASE."/public/projects/approval");
-            } else {
-                header("Location: ".URL_BASE."/public/login");
+	            self::redirect(URL_BASE . "/public/login");
             }
         }
 
+	    public function approve($projectId) {
+            if (User::isLoggedUser()) {
+	            $this->view(array('projectId' => $projectId));
+                // header("Location: ".URL_BASE."/public/projects/approval");
+            } else {
+	            self::redirect(URL_BASE . "/public/login");
+            }
+        }
+
+	    public function delete($projectId) {
+		    if (User::isLoggedUser() && User::hasLoggedUserAccess("admin")) {
+			    $this->view(array('projectId' => $projectId));
+		    } else {
+			    self::redirect(URL_BASE . "/public/login");
+		    }
+	    }
     }

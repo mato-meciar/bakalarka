@@ -32,7 +32,7 @@
             $result = User::registerUser($_POST['email'], $_POST['password'], "NULL", $_POST['role']);
             if ($result) {
                 unset($_POST);
-                header("Location: ".URL_BASE."/public/home");
+                self::redirect(URL_BASE . "/public/home");
             }
         }
 }

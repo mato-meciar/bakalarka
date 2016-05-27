@@ -15,8 +15,8 @@
         
         public function logout() {
             if (User::isLoggedUser()) {
-                $this->userLogout();
-                header("Location: ".URL_BASE."/public/login");
+                User::logout();
+                self::redirect(URL_BASE . "/public/login");
             }
         }
 
