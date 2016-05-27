@@ -3,8 +3,7 @@
 }
 
 body {
-    overflow-x: hidden;
-    padding-top: 50px;
+    /*overflow-x: hidden;*/
 }
 
 #well {
@@ -32,4 +31,16 @@ body {
 
 .navbar li:hover {
     background: rgba(255,255,255,0.2);
+}
+
+#resultsTable tbody tr:nth-child(even) {
+    background-color: #e0ffc0;
+}
+
+#resultsTable tbody tr:nth-child(odd) {
+    background-color: #e0ffff;
+}
+
+table td {
+    text-align: left;
 }

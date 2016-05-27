@@ -13,15 +13,22 @@
             if (User::isLoggedUser()) {
                 $this->view('group/index');
             } else {
-                header("Location: ".URL_BASE."/public/login");
+	            self::redirect(URL_BASE . "/public/login");
             }
         }
         
         public function edit() {
             if (User::isLoggedUser()) {
-                $group = new Group();
-                $groupInfo = $group->getGroupByLeader(User::getUid());
+	            $groupInfo = Group::getGroupByLeader(User::getUid($_SESSION['user']));
                 $this->view(array('groupInfo' => $groupInfo));
             }
         }
+
+	    public function show() {
+		    if (User::isLoggedUser()) {
+			    $this->view('group/index');
+		    } else {
+			    self::redirect(URL_BASE . "/public/login");
+		    }
+	    }
     }

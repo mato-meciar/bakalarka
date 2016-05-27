@@ -1,8 +1,8 @@
 <?php
 
 class Group {
-    
-    public function getgroupList() {
+
+	public static function getGroupList() {
         $mysql = new MySQL();
         
         $sql = "SELECT s.id, s.nazov, s.email, s.veduci_id, s.schopnosti, s.clenovia
@@ -10,8 +10,18 @@ class Group {
 
         return $mysql->get_all($sql);
     }
-    
-    public function getGroup($group_id) {
+
+	public static function getGroupListOrderById() {
+		$mysql = new MySQL();
+
+		$sql = "SELECT s.id, s.nazov, s.email, s.veduci_id, s.schopnosti, s.preferencie, s.clenovia
+                FROM skupina s
+                ORDER BY s.id";
+
+		return $mysql->get_all($sql);
+	}
+
+	public static function getGroup($group_id) {
         $mysql = new MySQL();
         $groupID = $mysql->validate($group_id);
         
@@ -20,16 +30,16 @@ class Group {
                 WHERE s.id = '$groupID'";
         return $mysql->get_one($sql);
     }
-    
-    public function existsGroupByLeader($leader_id) {
+
+	public static function existsGroupByLeader($leader_id) {
         $mysql = new MySQL();
         $leaderID = $mysql->validate($leader_id);
 
         $sql = "SELECT EXISTS (SELECT * FROM skupina WHERE veduci_id = '$leaderID') AS exist";
         return boolval($mysql->get_one_assoc($sql)['exist']);
     }
-    
-    public function getGroupByLeader($leader_id) {
+
+	public static function getGroupByLeader($leader_id) {
         $mysql = new MySQL();
         $leaderID = $mysql->validate($leader_id);
 
@@ -38,8 +48,8 @@ class Group {
                 WHERE s.veduci_id = '$leaderID'";
         return $mysql->get_one($sql);
     }
-    
-    public function addGroup($name, $email, $leader_id, $skills, $members) {
+
+	public static function addGroup($name, $email, $leader_id, $skills, $members) {
         $mysql = new MySQL();
         $name = $mysql->validate($name);
         $email = $mysql->validate($email);
@@ -52,8 +62,8 @@ class Group {
         $result = $mysql->set($sql);
         return true;
     }
-    
-    public function updategroup($group_id, $name, $email, $skills, $members) {
+
+	public static function updateGroup($group_id, $name, $email, $skills, $members) {
         $mysql = new MySQL();
         $groupID = $mysql->validate($group_id);
         $name = $mysql->validate($name);
@@ -70,8 +80,8 @@ class Group {
                 WHERE id = "'.$groupID.'"';
         return $mysql->set($sql);
     }
-    
-    public function updatePreferences($preferences, $groupID) {
+
+	public static function updatePreferences($preferences, $groupID) {
         $mysql = new MySQL();
         $preferences = $mysql->validate($preferences);
         

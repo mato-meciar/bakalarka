@@ -8,7 +8,7 @@
         }
         public function index() {
             if (User::isLoggedUser()) {
-                header("Location: ".URL_BASE."/public/home");
+                self::redirect(URL_BASE . "/public/login");
             } else {
                 $this->view('login/index');
             }

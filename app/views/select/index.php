@@ -2,11 +2,10 @@
     require_once dirname(dirname(dirname(__FILE__)))."/controllers/API.php";
 
     if (sizeof($_POST) > 0){
-        $api = new API();
-        $result = $api->projectPreferences($_POST, $data['groupInfo']['id']);
+        $result = API::projectPreferences($_POST, $data['groupInfo']['id']);
         if ($result) {
             unset($_POST);
-            header("Location: ".URL_BASE."/public/select");
+            self::redirect(URL_BASE . "/public/select");
         }
     }
 
@@ -18,25 +17,23 @@
             }
         }
     }
-    
+
 ?>
 
-<h2>Vyber projektu</h2>
-<?php $group = new Group(); if(!$group->existsGroupByLeader($_SESSION['uid'])): ?>
+    <h2>Výber projektu</h2>
+<?php if (!Group::existsGroupByLeader($_SESSION['uid'])): ?>
     <div class="alert alert-danger">
-        Este nemate vytvorenu skupinu! Musite ju najskor <a href="<?= URL_BASE?>/public/groups/index">vytvorit</a>.
+        Ešte nemáte vytvorenú skupinu! Musíte ju najskôr <a href="<?= URL_BASE ?>/public/groups/index">vytvoriť</a>.
     </div>
-<?php else: ?>
-
-
+<?php elseif (intval($_SESSION['boli_pridelene']) != 1): ?>
 <div class="alert alert-info alert-dismissable fade in">
     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-    Ohodnotte aspon jeden projekt podla preferencie.
+    Ohodnoťte aspoň jeden projekt podľa preferencie.
 </div>
 <div class="alert alert-danger alert-dismissable fade in">
     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-    Aj ked budete mat vybraty len 1 projekt s najvyssou preferencoiu este nemate zarucene,
-    ze ho dostanete!
+    Aj ked budete mať vybratý len 1 projekt s najvyššou preferencoiu ešte nemáte zaručené,
+    že ho dostanete!
 </div>
 <form role="form" method="post">
 <?php
@@ -44,19 +41,21 @@
     <table class="table table-striped table-bordered">
         <tbody>
             <tr>
-                <td colspan="4" title="Nazov projektu"><strong><?=$row['nazov']?></strong></td>
+                <td colspan="4" title="Názov projektu"><strong><?= $row['nazov'] ?></strong></td>
             </tr>
             <tr>
                 <td colspan="4" class="ellipsis" title="Popis projektu"><?=$row['popis']?></td>
             </tr>
             <tr>
-                <td colspan="4" title="Oblast projektu"><?=preg_replace('/(?<!\d)[.,!?](?!\d)/', ', ', $row['oblast']);?></td>
+                <td colspan="4"
+                    title="Oblasť projektu"><?= preg_replace('/(?<!\d)[.,!?](?!\d)/', ', ', $row['oblast']); ?></td>
             </tr>
             <tr>
                 <td colspan="4" title="Platforma projektu"><?=preg_replace('/(?<!\d)[.,!?](?!\d)/', ', ', $row['platforma']);?></td>
             </tr>
             <tr>
-                <td colspan="4" title="Technologie projektu"><?=preg_replace('/(?<!\d)[.,!?](?!\d)/', ', ', $row['technologie']);?></td>
+                <td colspan="4"
+                    title="Technológie projektu"><?= preg_replace('/(?<!\d)[.,!?](?!\d)/', ', ', $row['technologie']); ?></td>
             </tr>
             <tr>
                 <td title="Preferencia projektu" align="center">
@@ -95,10 +94,16 @@
                 </td>
             </tr>
         </tbody>
-    </table> 
+    </table>
 
     <?php
     } ?>
-    <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-save"></span> Ulozit zmeny</button>
+    <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-save"></span> Uložiť zmeny</button>
 </form>
+<?php else: ?>
+    <div class="alert alert-danger">
+        Projekty už boli priradené! Výsledky priradenia si môžete <a href="<?= URL_BASE ?>/public/projects">pozrieť
+            tu</a>.
+    </div>
+
 <?php endif; ?>

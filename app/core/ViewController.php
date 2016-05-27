@@ -10,10 +10,6 @@ class ViewController extends BaseController {
         $this->navigation = array();
     }
     
-    protected function showContent($view, $data = array()) {
-        require_once dirname(dirname(__FILE__)).'/views/body.php';
-    }
-    
     protected function showLogin($message = "") {
         $view = 'login/index';
         $title = 'Prihlasenie';
@@ -52,6 +48,10 @@ class ViewController extends BaseController {
             throw new Exception('File app/views/' . $controller_name . '/' . $method . '.php doesn\'t exist');
         }
     }
+
+    protected function showContent($view, $data = array()) {
+        require_once dirname(dirname(__FILE__)) . '/views/body.php';
+    }
     
     protected function viewMessage($message) {
         $view = 'message';
@@ -60,10 +60,10 @@ class ViewController extends BaseController {
     }
     
     protected function refresh() {
-        header('Location: ' . $this->getUrl($_GET['url']));
+        self::redirect($this->getUrl($_GET['url']));
     }
     
     protected function goToUrl($url) {
-        header('Location: ' . $this->getUrl($url));
+        self::redirect($this->getUrl($url));
     }
 }

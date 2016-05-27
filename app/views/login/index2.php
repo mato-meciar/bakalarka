@@ -32,11 +32,9 @@
     require_once dirname(dirname(dirname(__FILE__)))."/controllers/API.php";
 
         if (isset($_POST['email']) && isset($_POST['password'])) {
-            $api = new API();
-            $result = $api->login(); //TODO remove, change to logging in in User class
+            $result = API::login(); //TODO remove, change to logging in in User class
             if ($result) {
-                header("Location: ".URL_BASE."/public/home");
-            } else {
+                self::redirect(URL_BASE . "/public/home");
             }
         }
     ?>
