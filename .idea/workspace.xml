@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea3489e9-2040-48a8-be38-27c1c457b782" name="Default" comment="Rename files in /views&#10;    - Unix systems are case-sensitive by default, FU Windows." />
+    <list default="true" id="ea3489e9-2040-48a8-be38-27c1c457b782" name="Default" comment="Remove unused NetBeans project properties folder.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/projects/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/projects/edit.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -517,7 +520,7 @@
       <workItem from="1631795626980" duration="101000" />
       <workItem from="1631795742681" duration="1264000" />
       <workItem from="1631798080725" duration="757000" />
-      <workItem from="1631798930720" duration="666000" />
+      <workItem from="1631798930720" duration="1463000" />
     </task>
     <task id="LOCAL-00001" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;">
       <created>1464358464833</created>
@@ -533,7 +536,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631799548329</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Remove unused NetBeans project properties folder.">
+      <created>1631799788546</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1631799788546</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -600,7 +610,8 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;" />
     <MESSAGE value="small updates&#10;added intro page to automatic assignment" />
     <MESSAGE value="Rename files in /views&#10;    - Unix systems are case-sensitive by default, FU Windows." />
-    <option name="LAST_COMMIT_MESSAGE" value="Rename files in /views&#10;    - Unix systems are case-sensitive by default, FU Windows." />
+    <MESSAGE value="Remove unused NetBeans project properties folder." />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove unused NetBeans project properties folder." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />

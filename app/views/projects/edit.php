@@ -4,7 +4,7 @@
 	        $result = API::updateProject($data['projectInfo']['id']);
             if ($result) {
                 unset($_POST);
-	            self::redirect(URL_BASE . "/public/projects/index/true");
+	            self::redirect(URL_BASE . "/public/projects/index");
             }
         }
 ?>
@@ -53,16 +53,22 @@
             </div>
         </div>
         <div>
-	        <a class="btn btn-info" href="<?= URL_BASE . '/public/projects/index/true' ?>"><span
-			        class="glyphicon glyphicon-chevron-left"></span> Späť</a>
-	        <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-save"></span> Uložiť zmeny
-	        </button>
+            <a class="btn btn-info" href="<?= URL_BASE . '/public/projects/index' ?>"><span
+                        class="glyphicon glyphicon-chevron-left"></span> Späť</a>
+            <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-save"></span> Uložiť zmeny
+            </button>
         </div>
     </form>
 </div>
 
 <script>
-    jQuery(".tm-input-domain").tagsManager({hiddenTagListName: 'domain', delimiters: [44, 13], prefilled: <?php echo json_encode(explode(',', $data['projectInfo']['oblast'])); ?>});
-    jQuery(".tm-input-platform").tagsManager({hiddenTagListName: 'platform', delimiters: [44, 13], prefilled: <?php echo json_encode(explode(',', $data['projectInfo']['platforma'])); ?>});
+    jQuery(".tm-input-domain").tagsManager({
+        hiddenTagListName: 'domain',
+        delimiters: [44, 13],
+        prefilled: <?php echo json_encode(explode(',', $data['projectInfo']['oblast'])); ?>});
+    jQuery(".tm-input-platform").tagsManager({
+        hiddenTagListName: 'platform',
+        delimiters: [44, 13],
+        prefilled: <?php echo json_encode(explode(',', $data['projectInfo']['platforma'])); ?>});
     jQuery(".tm-input-technologies").tagsManager({hiddenTagListName: 'technologies', delimiters: [44, 13], prefilled: <?php echo json_encode(explode(',', $data['projectInfo']['technologie'])); ?>});
 </script>
