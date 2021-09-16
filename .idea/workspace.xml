@@ -1,32 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea3489e9-2040-48a8-be38-27c1c457b782" name="Default" comment="small updates&#10;added intro page to automatic assignment">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/API.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/Create_project.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/Groups.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/Home.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/Login.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/Projects.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/Register.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/Select.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/Selection.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/Settings.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/Welcome.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/create_project/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/create_project/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/groups/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/groups/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/groups/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/groups/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/login/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/login/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/login/index2.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/login/index2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/projects/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/projects/edit.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/register/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/register/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/select/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/select/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/selection/assign.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/selection/assign.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/settings/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/settings/index.php" afterDir="false" />
-    </list>
+    <list default="true" id="ea3489e9-2040-48a8-be38-27c1c457b782" name="Default" comment="Rename files in /views&#10;    - Unix systems are case-sensitive by default, FU Windows." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -542,7 +517,7 @@
       <workItem from="1631795626980" duration="101000" />
       <workItem from="1631795742681" duration="1264000" />
       <workItem from="1631798080725" duration="757000" />
-      <workItem from="1631798930720" duration="367000" />
+      <workItem from="1631798930720" duration="666000" />
     </task>
     <task id="LOCAL-00001" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;">
       <created>1464358464833</created>
@@ -551,7 +526,14 @@
       <option name="project" value="LOCAL" />
       <updated>1464358464833</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Rename files in /views&#10;    - Unix systems are case-sensitive by default, FU Windows.">
+      <created>1631799548329</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1631799548329</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -617,7 +599,8 @@
     <MESSAGE value="added contact mail to project creation/editing&#10;fixed project editing after assignment&#10;added project deletion for admin&#10;added index of projects for not logged user&#10;fixed group adding&#10;added marking of important project&#10;added date check for group creation&#10;added page for setting the date to check&#10;implemented generation algorithm for  automated project assignment&#10;added change the projects after automatic assignment proposal&#10;" />
     <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;" />
     <MESSAGE value="small updates&#10;added intro page to automatic assignment" />
-    <option name="LAST_COMMIT_MESSAGE" value="small updates&#10;added intro page to automatic assignment" />
+    <MESSAGE value="Rename files in /views&#10;    - Unix systems are case-sensitive by default, FU Windows." />
+    <option name="LAST_COMMIT_MESSAGE" value="Rename files in /views&#10;    - Unix systems are case-sensitive by default, FU Windows." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
