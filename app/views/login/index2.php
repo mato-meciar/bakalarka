@@ -29,7 +29,7 @@
     </form>
 
     <?php
-    require_once dirname(dirname(dirname(__FILE__)))."/controllers/API.php";
+    require_once dirname(dirname(dirname(__FILE__))) . "/controllers/api.php";
 
         if (isset($_POST['email']) && isset($_POST['password'])) {
             $result = API::login(); //TODO remove, change to logging in in User class

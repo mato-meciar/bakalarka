@@ -12,8 +12,8 @@
 		<form method="post" role="form" id="loginForm" data-toggle="validator">
 			<?php
 			require_once dirname(dirname(dirname(__FILE__))) . '/models/DBtables/User.php';
-			require_once dirname(dirname(dirname(__FILE__))) . '/controllers/API.php';
-			include_once dirname(dirname(dirname(__FILE__))) . '/config.php';
+            require_once dirname(dirname(dirname(__FILE__))) . '/controllers/api.php';
+            include_once dirname(dirname(dirname(__FILE__))) . '/config.php';
 			global $client;
 			global $service;
 			global $redirect_uri;

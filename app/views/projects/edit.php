@@ -1,5 +1,5 @@
 <?php
-    require_once dirname(dirname(dirname(__FILE__)))."/controllers/API.php";
+    require_once dirname(dirname(dirname(__FILE__))) . "/controllers/api.php";
         if (isset($_POST['name']) && isset($_POST['details']) && isset($_POST['domain']) && isset($_POST['platform']) && isset($_POST['technologies'])) {
 	        $result = API::updateProject($data['projectInfo']['id']);
             if ($result) {

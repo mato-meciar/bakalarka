@@ -2,26 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ea3489e9-2040-48a8-be38-27c1c457b782" name="Default" comment="small updates&#10;added intro page to automatic assignment">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/selection/welcome.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Selection.php" afterPath="$PROJECT_DIR$/app/controllers/Selection.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/core/GA.php" afterPath="$PROJECT_DIR$/app/core/GA.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/navigation.php" afterPath="$PROJECT_DIR$/app/views/navigation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/selection/assign.php" afterPath="$PROJECT_DIR$/app/views/selection/assign.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/selection/edit.php" afterPath="$PROJECT_DIR$/app/views/selection/edit.php" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/API.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/Create_project.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/Groups.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/Home.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/Login.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/Projects.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/Register.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/Select.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/Selection.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/Settings.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/Welcome.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/create_project/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/create_project/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/groups/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/groups/edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/groups/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/groups/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/login/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/login/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/login/index2.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/login/index2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/projects/edit.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/projects/edit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/register/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/register/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/select/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/select/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/selection/assign.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/selection/assign.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/settings/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/settings/index.php" afterDir="false" />
     </list>
-    <ignored path="bakalarka.iws" />
-    <ignored path=".idea/workspace.xml" />
-    <ignored path=".idea/dataSources.local.xml" />
-    <ignored path=".idea/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="ComposerSettings">
+    <execution />
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -38,74 +51,8 @@
       </PATH_ELEMENT>
     </PATH>
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="bakalarka" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/selection/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="699">
-              <caret line="65" column="115" selection-start-line="65" selection-start-column="115" selection-end-line="65" selection-end-column="115" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="navigation.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/navigation.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="48" column="56" selection-start-line="48" selection-start-column="56" selection-end-line="48" selection-end-column="56" />
-              <folding>
-                <marker date="1464364284238" expanded="true" signature="1215:1259" ph="..." />
-                <marker date="1464364284238" expanded="true" signature="1466:1500" ph="..." />
-                <marker date="1464364284238" expanded="true" signature="3621:3664" ph="..." />
-                <marker date="1464364284238" expanded="true" signature="3871:3905" ph="..." />
-                <marker date="1464364284238" expanded="true" signature="4913:4956" ph="..." />
-                <marker date="1464364284238" expanded="true" signature="5229:5263" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="assign.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/selection/assign.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="682">
-              <caret line="62" column="51" selection-start-line="62" selection-start-column="19" selection-end-line="62" selection-end-column="51" />
-              <folding>
-                <element signature="n#remove_accents#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="welcome.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/selection/welcome.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GA.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/core/GA.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-              <folding>
-                <element signature="e#512#6081#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -177,22 +124,16 @@
       <server host="http://localhost" id="a17de424-9ee5-4b12-9fa7-47703677a731" name="localhost" />
     </servers>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 5.6" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.3" />
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
-    <OptionsSetting value="true" id="Add" />
-    <OptionsSetting value="true" id="Remove" />
-    <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
-    <OptionsSetting value="true" id="Status" />
-    <OptionsSetting value="true" id="Edit" />
+  <component name="ProjectId" id="1yBYCVltAHvySo0F7NywSA2oC7Q" />
+  <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
-    <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -526,69 +467,54 @@
       <pane id="Scratches" />
     </panes>
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.idea" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Ignored.Files" />
-    <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$3/SQL Dialects" value="MySQL" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected="JavaScript Debug.public">
-    <configuration default="false" name="public" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" engineId="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" uri="http://localhost/bakalarka/public">
-      <method />
+  <component name="RunManager" selected="PHP Built-in Web Server.bakalarka">
+    <configuration name="public" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost/bakalarka/public">
+      <method v="2" />
     </configuration>
-    <configuration default="false" name="bakalarka" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+    <configuration name="bakalarka" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner directory="$PROJECT_DIR$" />
-      <method />
+      <method v="2" />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
-    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
-      <BehatRunner />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
-      <method />
+    <configuration name="bakalarka" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" document_root="$PROJECT_DIR$" port="8081">
+      <method v="2" />
     </configuration>
     <configuration default="true" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" browser="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" server_name="localhost" start_url="/bakalarka/public">
-      <method />
+      <method v="2" />
     </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+    <configuration default="true" type="js.build_tools.gulp">
       <node-interpreter>project</node-interpreter>
       <node-options />
       <gulpfile />
       <tasks />
       <arguments />
       <envs />
-      <method />
+      <method v="2" />
     </configuration>
-    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
-      <command value="run-script" />
-      <scripts />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
-    <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.public" />
-      <item index="1" class="java.lang.String" itemvalue="PHPUnit.bakalarka" />
+    <list>
+      <item itemvalue="JavaScript Debug.public" />
+      <item itemvalue="PHP Built-in Web Server.bakalarka" />
+      <item itemvalue="PHPUnit.bakalarka" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.public" />
-        <item index="1" class="java.lang.String" itemvalue="PHPUnit.bakalarka" />
+      <list>
+        <item itemvalue="JavaScript Debug.public" />
+        <item itemvalue="PHPUnit.bakalarka" />
       </list>
     </recent_temporary>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
-  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -611,6 +537,12 @@
       <workItem from="1464329801733" duration="15672000" />
       <workItem from="1464348449713" duration="9552000" />
       <workItem from="1464358333510" duration="3916000" />
+      <workItem from="1631726327979" duration="2372000" />
+      <workItem from="1631790636310" duration="2619000" />
+      <workItem from="1631795626980" duration="101000" />
+      <workItem from="1631795742681" duration="1264000" />
+      <workItem from="1631798080725" duration="757000" />
+      <workItem from="1631798930720" duration="367000" />
     </task>
     <task id="LOCAL-00001" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;Conflicts:&#10;&#9;.idea/workspace.xml&#10;">
       <created>1464358464833</created>
@@ -656,6 +588,21 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997833" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
       <collection />
@@ -663,9 +610,6 @@
     <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
       <collection />
     </option>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
@@ -677,12 +621,6 @@
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="3" />
-    </breakpoint-manager>
-    <watches-manager />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_1.php">

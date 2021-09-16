@@ -1,6 +1,6 @@
 <h2>Upravenie skupiny</h2>
 <?php
-require_once dirname(dirname(dirname(__FILE__))) . "/controllers/API.php";
+require_once dirname(dirname(dirname(__FILE__))) . "/controllers/api.php";
 $limit = new DateTime(API::getGroupCreationDate(true));
 $today = new DateTime('now');
 if ($today > $limit) :
@@ -53,7 +53,7 @@ elseif (!Group::existsGroupByLeader($_SESSION['uid'])): ?>
 </script>
 <?php endif;
 
-require_once dirname(dirname(dirname(__FILE__))) . "/controllers/API.php";
+require_once dirname(dirname(dirname(__FILE__))) . "/controllers/api.php";
 if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['members']) && isset($_POST['skills'])) {
 	$result = API::updateGroup($data['groupInfo']['id']);
 	if ($result) {

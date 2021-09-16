@@ -3,7 +3,7 @@ require_once dirname(dirname(__FILE__)).'/app/libraries/Google/autoload.php';
 
 
 define('URL_BASE', 'http://' . $_SERVER['SERVER_NAME'] . '/bakalarka');
-//define('URL_BASE', 'http://localhost/');
+//define('URL_BASE', 'http://localhost/bakalarka');
 define('CURRENT_SCHOOL_YEAR', '2016');
 
 // MySQL

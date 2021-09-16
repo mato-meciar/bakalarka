@@ -26,7 +26,7 @@
     </form>
     
     <?php
-    require_once dirname(dirname(dirname(__FILE__)))."/controllers/API.php";
+    require_once dirname(dirname(dirname(__FILE__))) . "/controllers/api.php";
     if (!User::isLoggedUser()) {
         if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['role'])) {
             $result = User::registerUser($_POST['email'], $_POST['password'], "NULL", $_POST['role']);

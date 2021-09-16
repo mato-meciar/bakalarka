@@ -1,5 +1,5 @@
 <?php
-require_once dirname(dirname(dirname(__FILE__))) . "/controllers/API.php";
+require_once dirname(dirname(dirname(__FILE__))) . "/controllers/api.php";
 
 $_SESSION['vytvaranie_skupin'] = API::getGroupCreationDate();
 
